@@ -2,40 +2,32 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
+  font-display: swap;
   src:url("fonts\raleway\raleway-800.woff2") format("woff2")
-  font-display: swap;
 }
 
 @font-face {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src:url("fonts\rubik\rubik-400.woff2") format("woff2")
   font-display: swap;
-}
-
-@font-face {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 400;
   src:url("fonts\rubik\rubik-400.woff2") format("woff2")
-  font-display: swap;
 }
 
 @font-face {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
-  src:url("fonts\rubik\rubik-700.woff2") format("woff2")
   font-display: swap;
+  src:url("fonts\rubik\rubik-700.woff2") format("woff2")
 }
 
 @font-face {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 800;
-  src:url("fonts\rubik\rubik-800.woff2") format("woff2")
   font-display: swap;
+  src:url("fonts\rubik\rubik-800.woff2") format("woff2")
 }
 
 .visually-hidden {
@@ -50,3 +42,158 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/*
+basik-black                   #000000
+basik-dark                    #444444
+basik-gray                    #dcdcdc
+basik-light-gray              #ebebeb
+basik-light                   #f0f0f0
+basik-white                   #ffffff
+special-yellow-light          #ffe17f
+special-yellow-dark-hover     #ffc700
+special-purple                #af4fff
+status-error                  #ff3d3d
+status-warning                #fd912e
+status-success                #08af00
+*/
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.user-menu ul,
+.main-menu ul{
+  List-style: none;
+}
+
+.navigation-link,
+.catalog-toggle-link{
+  text-decoration: none;
+  color:inherit;
+}
+
+.basket-status{
+  width:21px;
+  height:21px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.catalog-toggle-link,
+.main-navigation{
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.catalog-item-category{
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.slider-wrapper,
+.goods-slider{
+  position: relative;
+}
+
+.goods-slider::before {
+  content: "01";
+  position: absolute;
+  top: 0;
+  left: 861px;
+  width: 250px;
+  height: 135px;
+  font-family: "Rubik", sans-serif;
+  font-size: 180px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+  z-index: -1;
+}
+
+.slider-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 410px;
+  left: 0;
+  width: 1160px;
+  height: 300px;
+  background-color: #ffe17f;
+  z-index: -2;
+}
+
+.goods-slider-header{
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.goods-slider-button{
+  width:210px;
+  height:20px;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  color:#000000;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.goods-slider-button::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -5px;
+  width: 220px;
+  height: 8px;
+  background-color: #ffe17f;
+  z-index: -1;
+}
+
+.slider-pagination{
+  list-style: none
+}
+.slider-pagination-button{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding:0;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.slider-pagination-button-current{
+  background-color: #000000;
+}
+
+.feature-title{
+  font-size: 16px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.feature-definition{
+  font-size: 36px;
+  line-height: 30px;
+}
+
+.categories-link-icon{
+  background-color: #ffe17f;
+}
+
+
