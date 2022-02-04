@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src:url("..\fonts\raleway\raleway-800.woff2") format("woff2")
+  src:url("../fonts/raleway/raleway-800.woff2") format("woff2")
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:url("..\fonts\rubik\rubik-400.woff2") format("woff2")
+  src:url("../fonts/rubik/rubik-400.woff2") format("woff2")
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src:url("..\fonts\rubik\rubik-700.woff2") format("woff2")
+  src:url("../fonts/rubik/rubik-700.woff2") format("woff2")
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src:url("..\fonts\rubik\rubik-800.woff2") format("woff2")
+  src:url("../fonts/rubik/rubik-800.woff2") format("woff2")
 }
 
 .visually-hidden {
@@ -194,7 +194,7 @@ body {
   height: 60px;
 
   background-color: transparent;
-  background-image: url(images\slider\icon-arrow-left.svg) ;
+  background-image: url(../images/slider/icon-arrow-left.svg) ;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -205,7 +205,7 @@ body {
   height: 60px;
 
   background-color: transparent;
-  background-image: url(images\slider\icon-arrow-right.svg) ;
+  background-image: url(../images/slider/icon-arrow-right.svg) ;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -482,7 +482,7 @@ padding: 9px 120px 11px 0;
 .page-footer{
   color: #ffffff;
 
-  background-color:#444444 ;
+  background-color:#444444;
 }
 .footer-adress{
   font-family: Rubik;
@@ -510,15 +510,15 @@ padding: 9px 120px 11px 0;
   background-color:rgba(255, 255, 255, 0.3);
 }
 .button-facebook{
-  background:no-repeat center url(images\icons\icon-facebook.svg) ;
+  background:no-repeat center url(../images/icons/icon-facebook.svg);
 }
 
 .button-instagram{
-  background:no-repeat center url(images\icons\icon-instagram.svg) ;
+  background:no-repeat center url(../images/icons/icon-instagram.svg);
 }
 
 .button-twitter{
-  background:no-repeat center url(images\icons\icon-twitter.svg) ;
+  background:no-repeat center url(../images/icons/icon-twitter.svg);
 }
 
 .academy-button{
@@ -526,7 +526,7 @@ padding: 9px 120px 11px 0;
   width:115px;
   height:33px;
 
-  background:no-repeat center url(images\logo-html-academy.svg) ;
+  background:no-repeat center url(../images/logo-html-academy.svg);
 }
 
 .catalog-header{
