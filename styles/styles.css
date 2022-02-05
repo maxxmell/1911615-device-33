@@ -61,8 +61,16 @@ status-error                  #ff3d3d
 status-warning                #fd912e
 status-success                #08af00
 */
+html {
+  height: 100%;
+}
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -93,25 +101,214 @@ body {
   text-decoration: none;
 }
 
+.page-header{
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  height: 140px;
+  margin:13px auto 0;
+}
+
+.logo-link{
+  margin-top: 4.4px;
+  margin-left: 60px;
+}
+
+.user-menu,
+.main-menu{
+  display: flex;
+  width: 1040px;
+  margin:0px auto;
+}
+
+.user-menu{
+  margin-bottom: 30px;;
+}
+
+.main-menu{
+  justify-content: space-between;
+  height: 50px;
+}
+
+.search-form{
+display:flex;
+align-items: center;
+margin-right: 26px;
+}
+
+.search-wrapper{
+  display:flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 359px;
+  height: 40px;
+  margin-right: -2px;
+  padding: 0;
+
+  border: 2px solid #000000;
+  border-right: 0px;
+  border-radius: 50px 0px 0px 50px;
+}
+
+.search-form-label{
+ padding: 12px 14px 12px 16px;
+}
+
+.search-form-icon{
+  display: block;
+}
+
+.search-input{
+  width: 295px;
+  padding: 0;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color:#000000;
+
+  background-color: inherit;
+  border: none;
+  outline: none;
+}
+
+.search-input::placeholder {
+  font-family: Rubik;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color:#000000;
+
+  opacity: 0.3;
+}
+
+.search-button{
+  box-sizing: border-box;
+  width: 160px;
+  height: 40px;
+  padding: 0;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  color:#000000;
+
+  background-color: inherit;
+  border: 2px solid #000000;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.navigation-list{
+  display: flex;
+  margin: auto 0;
+  padding: 0;
+}
+
+.header-login{
+  width: 231px;
+  height: 30px;
+  margin-right: 26px;
+}
+
+.header-compare{
+  width: 105px;
+  height: 30px;
+  margin-right: 26px;
+}
+
+.header-basket{
+  width: 117px;
+  height: 30px;
+}
+
+.navigation-link{
+  display: flex;
+  margin: auto 0;
+}
+
+.navigation-link span{
+  margin: auto 0;
+}
+
+.navigation-link-icon{
+  display: block;
+  margin-top: auto;
+  margin-right: 12px;
+  margin-bottom: auto;
+}
+
+.icon-login{
+  padding: 0px 1px;
+}
+
+.icon-cart{
+  margin-left: -9px;
+  padding: 1.5px 0 5.5px 3px;
+}
+
 .basket-status{
+  z-index: 1;
+
+  display: flex;
   width:21px;
   height:21px;
+  margin: auto 0;
 
   font-size: 14px;
-  line-height: 17px;
+  line-height: 16.6px;
   text-align: center;
 
   background-color: #ffffff;
   border-radius: 50%;
 }
 
-.catalog-toggle-link,
+.catalog-toggler{
+  display: flex;
+  width: 293px;
+  height: 50px;
+}
+
 .main-navigation{
+  display: flex;
+  width: 471px;
+}
+
+.header-delivery{
+  margin-right: 47px;
+}
+
+.header-warranty{
+  margin-right: 45px;
+}
+
+.main-container{
+  flex-grow: 1;
+  }
+
+.catalog-toggle-link{
+  margin: auto 0;
+
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
+
+/* .catalog-toggle-icon{
+  box-sizing: border-box;
+  padding:15px;
+
+  border: 2px solid #000000;
+  border-radius: 50px;
+  opacity: 0.3;
+} */
 
 .catalog-item-category{
   font-size: 16px;
@@ -489,7 +686,7 @@ padding: 9px 120px 11px 0;
   font-size: 16px;
   line-height: 19px;
 }
-.navigation-list{
+.navigation-menu{
   font-family: Raleway;
   font-size: 18px;
   line-height: 21px;
