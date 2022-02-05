@@ -15,30 +15,32 @@
       <section class="user-menu">
         <h2 class="visually-hidden">Пользовательское меню</h2>
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="search-request">
-            <img class="search-form-icon" src="images\icons\icon-search.svg" width="16" height="16" alt="">
-          </label>
-          <input type="search" name="search-request" id="search-request" placeholder="Поиск по сайту" >
+          <div class="search-wrapper">
+            <label class="search-form-label" for="search-request">
+              <img class="search-form-icon" src="images\icons\icon-search.svg" width="16" height="16" alt="">
+            </label>
+            <input type="search" class="search-input" name="search-request" id="search-request" placeholder="Поиск по сайту" >
+          </div>
           <button class="search-button" type="submit">Найти</button>
         </form>
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
+          <li class="navigation-item header-login">
             <a class="navigation-link" href="">
-              <img class="navigation-link-icon" src="images\icons\icon-login.svg" width="13" height="12" alt="">
-              Войти
+              <img class="navigation-link-icon icon-login" src="images\icons\icon-login.svg" width="13" height="12" alt="">
+              <span>Войти</span>
             </a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-item header-compare">
             <a class="navigation-link" href="">
-              <img class="navigation-link-icon" src="images\icons\icon-compare.svg" width="10" height="12" alt="">
-              Сравнить
+              <img class="navigation-link-icon icon-compare" src="images\icons\icon-compare.svg" width="10" height="12" alt="">
+              <span>Сравнить</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="">
-              <p class="basket-status">2</p>
-              <img class="navigation-link-icon" src="images\icons\icon-cart.svg" width="16" height="14" alt="">
-              Корзина
+          <li class="navigation-item header-basket">
+            <a class="navigation-link basket-link" href="">
+              <span class="basket-status">2</span>
+              <img class="navigation-link-icon icon-cart" src="images\icons\icon-cart.svg" width="16" height="14" alt="">
+              <span>Корзина</span>
             </a>
           </li>
         </ul>
@@ -48,9 +50,12 @@
         <section class="catalog-toggler">
           <h2 class="visually-hidden">Категории каталога подменю</h2>
           <a class="catalog-toggle-link" href="catalog.html">
-            Каталог товаров
-            <img class="catalog-toggle-icon" src="images\icons\icon-plus.svg" width="16" height="16" alt="">
+            <span>Каталог товаров</span>
+            <div class="catalog-toggle-wrapper">
+              <img class="catalog-toggle-icon" src="images\icons\icon-plus.svg" width="16" height="16" alt="">
+            </div>
           </a>
+          <!-- <ul class="catalog-list catalog-hidden"> -->
           <ul class="catalog-list catalog-hidden visually-hidden">
             <li class="catalog-item-category catalog-item-category-VR">
               <a class="navigation-link" href="">Виртуальная реальность</a>
@@ -73,14 +78,14 @@
           </ul>
         </section>
         <nav class="main-navigation">
-          <ul class="navigation-list ">
-            <li class="navigation-item">
+          <ul class="navigation-list navigation-menu">
+            <li class="navigation-item header-delivery">
               <a class="navigation-link" href="">Доставка</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item header-warranty">
               <a class="navigation-link" href="">Гарантия</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item header-contacts">
               <a class="navigation-link" href="">Контакты</a>
             </li>
           </ul>

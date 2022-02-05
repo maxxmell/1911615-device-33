@@ -268,11 +268,6 @@ margin-right: 26px;
   border-radius: 50%;
 }
 
-.catalog-toggler{
-  display: flex;
-  width: 293px;
-  height: 50px;
-}
 
 .main-navigation{
   display: flex;
@@ -292,6 +287,11 @@ margin-right: 26px;
   }
 
 .catalog-toggle-link{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 293px;
+  height: 50px;
   margin: auto 0;
 
   font-family: "Raleway", sans-serif;
@@ -301,14 +301,20 @@ margin-right: 26px;
   letter-spacing: 0.2em;
 }
 
-/* .catalog-toggle-icon{
+
+.catalog-toggle-wrapper{
   box-sizing: border-box;
-  padding:15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
 
   border: 2px solid #000000;
-  border-radius: 50px;
+  border-radius: 50%;
   opacity: 0.3;
-} */
+}
+
 
 .catalog-item-category{
   font-size: 16px;
