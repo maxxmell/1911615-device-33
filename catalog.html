@@ -99,7 +99,7 @@
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">Главная</a>
           </li>
-          <li class="breadcrumbs-item">
+          <li class="breadcrumbs-item breadcrumbs-arrow">
             <img src="images\icons\icon-arrow-right.svg" alt="">
           </li>
           <li class="breadcrumbs-item">
@@ -113,94 +113,103 @@
           </li>
         </ul>
       </header>
-      <section class="catalog-products">
+      <div class="catalog-container">
+       <section class="catalog-products">
         <h2 class="visually-hidden">Список товаров с фильтрами</h2>
-        <h3 class="catalog-filter-header">Фильтр:</h3>
-        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Стоимость</legend>
-            <div class="container">
-                <div class="slider-track"></div>
-                <input type="range" min="0" max="100" value="0" id="slider-1" oninput="slideOne()">
-                <input type="range" min="0" max="100" value="60" id="slider-2" oninput="slideTwo()">
-            </div>
-            <div class="values">
-                <span id="range1">
-                   от 0
-                </span>
-                <span id="range2">
-                    до 5000
-                </span>
-            </div>
-          </fieldset>
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Цвет</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="color-filter" checked>
-                  Черный
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="color-filter" checked>
-                  Белый
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="color-filter">
-                  Синий
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="color-filter">
-                  Красный
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="color-filter">
-                  Розовый
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Bluetooth</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="bluetooth-avaible" value="true">
-              Есть
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="bluetooth-avaible" value="false" checked>
-              Нет
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="button-show" type="submit">Показать</button>
-        </form>
-        <h3 class="catalog-sorting-header">Сортировка:</h3>
-        <select class="select-control">
-          <option value="popular">Популярные</option>
-          <option value="cheap">Цена</option>
-          <option value="expensive">Новизна</option>
-        </select>
-        <a href="#" class="button button-sort-increase">
-          <span class="visually-hidden">По возрастанию</span>
-        </a>
-        <a class="button button-sort-decrease" href="#">
-          <span class="visually-hidden">По убыванию</span>
-        </a>
+        <div class="catalog-filter-container">
+          <h3 class="catalog-filter-header">Фильтр:</h3>
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Стоимость</legend>
+              <div class="container">
+                  <div class="slider-track"></div>
+                  <input type="range" min="0" max="100" value="0" id="slider-1" oninput="slideOne()">
+                  <input type="range" min="0" max="100" value="60" id="slider-2" oninput="slideTwo()">
+              </div>
+              <div class="values">
+                  <span id="range1">
+                    от 0
+                  </span>
+                  <span id="range2">
+                      до 5000
+                  </span>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Цвет</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="color-filter" checked>
+                    Черный
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="color-filter" checked>
+                    Белый
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="color-filter">
+                    Синий
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="color-filter">
+                    Красный
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="color-filter">
+                    Розовый
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Bluetooth</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="radio" name="bluetooth-avaible" value="true">
+                Есть
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="radio" name="bluetooth-avaible" value="false" checked>
+                Нет
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button-show" type="submit">Показать</button>
+          </form>
+        </div>
         <h3 class="catalog-products-header visually-hidden">Список товаров</h3>
         <div class="products-wrapper">
+          <div class="catalog-sort-container">
+            <h3 class="catalog-sorting-header">Сортировка:</h3>
+            <select class="select-control">
+              <option value="popular">Популярные</option>
+              <option value="cheap">Цена</option>
+              <option value="expensive">Новизна</option>
+            </select>
+            <div class="button-sort-container">
+              <a href="#" class="button-sort button-sort-increase">
+                <img src="images\icons\icon-arrow-sort-up.svg" width="10" height="10"alt="">
+                <span class="visually-hidden">По возрастанию</span>
+              </a>
+              <a class="button-sort button-sort-decrease" href="#">
+                <img src="images\icons\icon-arrow-sort-down.svg" width="10" height="10" alt="">
+                <span class="visually-hidden">По убыванию</span>
+              </a>
+            </div>
+          </div>
           <ul class="product-list">
             <li class="product-card">
               <a class="product-card-link" href="#">
@@ -235,32 +244,31 @@
               </a>
             </li>
           </ul>
-          <button class="button pagination-show-more" type="button">Загрузить ещё</button>
-          <ul class="pagination">
-            <li class="pagination-item">
-              <a class="pagination-link pagination-prev pagination-disabled">Назад</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link pagination-current">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
-            </li>
-            <li class="pagination-item pagination-item-disabled">
-              <a class="pagination-link">...</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">15</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link pagination-next" href="#">Вперёд</a>
-            </li>
-          </ul>
+          <button class="button catalog-pagination-show-more" type="button">Загрузить ещё</button>
+          <div class="catalog-pagination-wrapper">
+            <a class="catalog-pagination-link catalog-pagination-prev catalog-pagination-disabled">Назад</a>
+            <ul class="catalog-pagination">
+              <li class="catalog-pagination-item">
+                <a class="catalog-pagination-link catalog-pagination-current">1</a>
+              </li>
+              <li class="catalog-pagination-item">
+                <a class="catalog-pagination-link" href="#">2</a>
+              </li>
+              <li class="catalog-pagination-item">
+                <a class="catalog-pagination-link" href="#">3</a>
+              </li>
+              <li class="catalog-pagination-item catalog-pagination-item-disabled">
+                <a class="catalog-pagination-link">...</a>
+              </li>
+              <li class="catalog-pagination-item">
+                <a class="catalog-pagination-link" href="#">15</a>
+              </li>
+            </ul>
+            <a class="catalog-pagination-link catalog-pagination-next" href="#">Вперёд</a>
+           </div>
       </div>
-      </section>
+        </section>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="footer-container">
