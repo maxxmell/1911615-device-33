@@ -25,9 +25,11 @@
         </form>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item header-login">
-            <a class="navigation-link" href="">
+            <a class="navigation-link login-link" href="">
               <img class="navigation-link-icon icon-login" src="images\icons\icon-login.svg" width="13" height="12" alt="">
-              <span>Войти</span>
+              <span class="new-user login-current">Войти</span>
+              <span class="current-user login-hidden">Коля Петухов</span>
+              <span class="current-user-logoff login-hidden">Выйти</span>
             </a>
           </li>
           <li class="navigation-item header-compare">
@@ -38,7 +40,9 @@
           </li>
           <li class="navigation-item header-basket">
             <a class="navigation-link basket-link" href="">
-              <span class="basket-status">2</span>
+              <div class="basket-status-container">
+                <span class="basket-status">2</span>
+              </div>
               <img class="navigation-link-icon icon-cart" src="images\icons\icon-cart.svg" width="16" height="14" alt="">
               <span>Корзина</span>
             </a>
@@ -78,7 +82,7 @@
           </ul>
         </section>
         <nav class="main-navigation">
-          <ul class="navigation-list navigation-menu">
+          <ul class="navigation-list main-navigation-list navigation-menu">
             <li class="navigation-item header-delivery">
               <a class="navigation-link" href="">Доставка</a>
             </li>
@@ -271,7 +275,7 @@
         </div>
         <div class="footer-links-container">
           <nav class="footer-navigation">
-            <ul class="navigation-list navigation-menu">
+            <ul class="navigation-list footer-navigation-menu navigation-menu">
               <li class="navigation-item">
                 <a class="navigation-link" href="">Доставка</a>
               </li>
