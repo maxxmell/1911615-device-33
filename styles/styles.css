@@ -238,7 +238,7 @@ body {
 
 .header-login{
   min-width: 231px;
-  height: 30px;
+  min-height: 30px;
 }
 
 .header-compare{
@@ -345,15 +345,16 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 293px;
-  height: 50px;
+  min-height: 50px;
   margin: auto 0;
 
   font-family: "Raleway", sans-serif;
-  line-height: 21px;
+  line-height: 20px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
+
 
 
 .catalog-toggle-wrapper{
@@ -362,7 +363,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   width: 50px;
-  height: 50px;
+  min-height: 50px;
 
   border: 2px solid #000000;
   border-radius: 50%;
@@ -386,14 +387,15 @@ body {
 .goods-slider{
   display: flex;
   width: 1160px;
-  height: 560px;
+  min-height: 560px;
   margin: 0 auto;
+  margin-bottom: 70px;
 }
 
 .slider-wrapper{
   display: flex;
   width: 560px;
-  height: 560px;
+  min-height: 560px;
 }
 
 .goods-slider-info::before {
@@ -404,7 +406,6 @@ body {
   z-index: -1;
 
   width: 250px;
-  height: 135px;
   margin-right: 49px;
 
   font-family: "Rubik", sans-serif;
@@ -430,22 +431,37 @@ body {
 
 .goods-slider-info{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin-top: 107.61px;
+  padding-left: 40px;
 }
 
 .goods-slider-header{
+  min-height: 100px;
+  margin: 0;
+  margin-bottom: 29px;
+
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
   font-weight: 800;
 }
 
+.goods-slider-description{
+  display: block;
+  margin: 0;
+  margin-bottom: 51px;
+}
+
 .goods-slider-button{
- display: flex;
- justify-content: center;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width:210px;
-  height:40px;
+  min-height:40px;
+  margin-bottom: 49px;
 
   font-family: "Raleway", sans-serif;
   line-height: 21px;
@@ -458,10 +474,19 @@ body {
   background: linear-gradient(to bottom, #ffffff 0px, #ffffff 16px, #ffe17f 16px, #ffe17f 24px, #ffffff 24px, #ffffff 40px);
 }
 
+.slider-image{
+  display: block;
+  margin-top: -15px;
+}
+
 .slider-prev{
+  position: absolute;
+  top: 196px;
+  left: 30px;
+  z-index: 1;
+
   width: 20px;
   height: 60px;
-  margin-top: 211px;
 
   background-color: transparent;
   background-image: url(../images/slider/icon-arrow-left.svg) ;
@@ -471,9 +496,13 @@ body {
   border: none;
 }
 .slider-next{
+  position: absolute;
+  top: 196px;
+  right: 0;
+  z-index: 1;
+
   width: 20px;
   height: 60px;
-  margin-top: 211px;
 
   background-color: transparent;
   background-image: url(../images/slider/icon-arrow-right.svg) ;
@@ -485,6 +514,19 @@ body {
 
 .slider-pagination{
   display: flex;
+  align-content: center;
+  height: 40px;
+  margin: 0;
+  margin-bottom: 49px;
+  justify-self: end;
+}
+
+.slider-pagination-item{
+  margin-right: 20px;
+}
+
+.slider-pagination-item:last-child{
+  margin-right: 0;
 }
 
 .slider-pagination-button{
@@ -499,24 +541,45 @@ body {
   -moz-appearance: none;
   appearance: none;
 }
+
 .slider-pagination-button-current{
   background-color: #000000;
 }
 
 .slider-goods-features{
   display: flex;
+  min-height: 72px;
+}
+
+.feature-block{
+  display: flex;
+  flex-direction: column-reverse;
+  min-width: 140px;
+  margin-right: 20px;
+}
+
+.feature-block:last-child{
+  margin-right: 0;
 }
 
 .feature-title{
+  margin: 0;
+
   font-size: 16px;
   line-height: 30px;
+  text-align: left;
   color: #444444;
+}
+
+.feature-definition{
+  margin: 0;
 }
 
 .feature-definition b{
   font-size: 36px;
   line-height: 30px;
   font-weight: 400;
+  text-align: left;
 }
 
 .catalog-categories{
@@ -539,6 +602,8 @@ body {
 }
 
 .categories-link{
+  display: inline-block;
+
   font-family: "Raleway", sans-serif;
   line-height: 24px;
   font-weight: 800;
@@ -566,7 +631,7 @@ body {
 
 .advantages{
   width:100%;
-  height:391px;
+  min-height:391px;
   margin-bottom: 70px;
 
   background: linear-gradient(to bottom, #ffffff 102px, #F0F0F0 102px);
@@ -575,7 +640,7 @@ body {
 .advantages-container{
   display: flex;
   width:1160px;
-  height: 391px;
+  min-height: 391px;
   margin: 0 auto;
 }
 
@@ -624,7 +689,7 @@ body {
 .advantage-wrapper{
   display: flex;
   width: 750px;
-  height: 200px;
+  min-height: 200px;
   margin-top: 72.5px;
   margin-left: 112px;
 }
@@ -643,7 +708,7 @@ body {
 
 .rare-goods-delivery{
   width:1160px;
-  height:100px;
+  min-height:100px;
   margin: 0 auto;
   margin-bottom: 70px;
 
@@ -765,7 +830,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 270px;
-  height: 40px;
+  min-height: 40px;
 
   font-family: "Raleway", sans-serif;
   line-height: 21px;
@@ -783,7 +848,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 259px;
-  height: 40px;
+  min-height: 40px;
 
   font-family: "Raleway", sans-serif;
   line-height: 21px;
@@ -816,21 +881,21 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 1160px;
-  height: 421px;
+  min-height: 421px;
   margin: 0 auto;
 }
 
 .newsletter-form{
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   width: 1158px;
-  height: 57px;
+  min-height: 57px;
 }
 
 .newsletter-title{
   display: block;
   width: 348px;
-  height: 100px;
+  min-height: 100px;
   margin: 64px 0 0 7px;
 
   font-family: "Raleway", sans-serif;
@@ -843,19 +908,60 @@ body {
 .newsletter-description{
   display: block;
   width: 553px;
-  height: 90px;
+  min-height: 90px;
   margin: 74px 0 0 252px;
 
   color: #444444;
   word-break: break-word;
 }
 
+.newsletter-field{
+  box-sizing: border-box;
+  width: 557px;
+  min-height: 57px;
+  margin-right: 0;
+  padding: 0;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  color:#000000;
+
+  background-color: inherit;
+  border: none;
+  border-bottom: 3px solid #C4C4C4;
+  outline: none;
+}
+
+.newsletter-field::placeholder {
+  padding-left: 16px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color:#000000;
+
+  opacity: 0.5;
+}
+
+.subscription-free{
+  display: inline-block;
+  margin-left: 16px;
+}
+
 .subscribe-button{
-   /* Блочная модель */
-  width: 175px;
-  height: 21px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-width: 175px;
+  min-height: 57px;
+  margin-left: 0;
   padding: 15px 36px;
-   /* Типографика */
+
   font-family: Raleway;
   font-style: normal;
   font-size: 18px;
@@ -864,19 +970,20 @@ body {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-   /* Оформление */
+
   border: 3px solid #CECECE;
 }
 
 .subscription-icon{
-  display:block
+  display:block;
+  margin-left: auto;
 }
 
 
 
 
 
-
+/* Начало футера */
 
 
 
@@ -910,7 +1017,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 239px;
-  height: 182px;
+  min-height: 182px;
   margin-top: 62px;
 }
 
@@ -927,7 +1034,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 444px;
-  height: 123px;
+  min-height: 123px;
   margin: 137px 0 0 0;
 }
 
@@ -940,7 +1047,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 150px;
-  height: 40px;
+  min-height: 40px;
   margin: 0 auto;
   padding: 0;
 }
@@ -948,7 +1055,7 @@ body {
 .footer-social-item .button{
   display:block;
   width: 40px;
-  height:40px;
+  min-height:40px;
 
   background-color:rgba(255, 255, 255, 0.3);
   border-radius: 50%;
@@ -982,7 +1089,7 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   width: 175px;
-  height: 116px;
+  min-height: 116px;
   margin-top: 140px;
 }
 
@@ -998,7 +1105,7 @@ body {
 
 
 
-
+/* Конец футера */
 
 
 
@@ -1011,7 +1118,7 @@ body {
   position:relative;
 
   width: 1160px;
-  height: 155px;
+  min-height: 155px;
   margin-top: 38px;
   margin-right: auto;
   margin-left: auto;
@@ -1150,7 +1257,7 @@ margin-right: 16px;
   display: flex;
   justify-content: space-between;
   width: 840px;
-  height: 70px;
+  min-height: 70px;
 
   background-color:#F0F0F0;
 }
@@ -1161,13 +1268,13 @@ margin-right: 16px;
 
 .button-sort-container{
   width: 60px;
-  height: 30px;
+  min-height: 30px;
   margin: 20px 40px 20px 0;
 }
 
 .button-sort{
   width: 30px;
-  height: 30px;
+  min-height: 30px;
 }
 
 
@@ -1187,7 +1294,7 @@ margin-right: 16px;
   display: flex;
   flex-wrap: wrap;
   width: 760px;
-  height: 948px;
+  min-height: 948px;
   margin: 70px 40px 44px;
   padding: 0;
 }
@@ -1213,7 +1320,7 @@ margin-right: 40px;
   display: flex;
   justify-content: space-between;
   width: 760px;
-  height: 71px;
+  min-height: 71px;
   margin: 0 auto;
   padding: 0;
 
@@ -1229,7 +1336,7 @@ margin-right: 40px;
 .catalog-pagination-show-more{
   display: block;
   width: 760px;
-  height: 55px;
+  min-height: 55px;
   margin: 0 auto;
   margin-bottom: 44px;
   padding:0;
@@ -1257,7 +1364,9 @@ margin-right: 40px;
 .catalog-pagination-prev,
 .catalog-pagination-next{
   display: block;
+  box-sizing: border-box;
   margin: auto 0;
+  padding: 25px;
 
   font-family: Raleway;
   font-style: normal;
