@@ -396,15 +396,11 @@ body {
   height: 560px;
 }
 
-.slider-number-hidden{
-  display: none;
-}
-
-
-.goods-slider-number{
+.goods-slider::before {
+  content: "01";
   position: absolute;
   top: 0;
-  right: 0;
+  left: 861px;
   z-index: -1;
 
   width: 250px;
@@ -413,7 +409,6 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 180px;
   line-height: 30px;
-  font-weight: 700;
   text-align: center;
   color: #ffffff;
 }
