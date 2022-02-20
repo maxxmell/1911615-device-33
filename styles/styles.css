@@ -396,20 +396,22 @@ body {
   height: 560px;
 }
 
-.goods-slider::before {
+.goods-slider-info::before {
   content: "01";
   position: absolute;
   top: 0;
-  left: 861px;
+  right: 0;
   z-index: -1;
 
   width: 250px;
   height: 135px;
+  margin-right: 49px;
 
   font-family: "Rubik", sans-serif;
   font-size: 180px;
-  line-height: 30px;
-  text-align: center;
+  line-height: 180px;
+  font-weight: 700;
+  text-align: right;
   color: #ffffff;
 }
 
@@ -870,6 +872,17 @@ body {
   display:block
 }
 
+
+
+
+
+
+
+
+
+
+
+
 .page-footer{
   color: #ffffff;
 
@@ -877,14 +890,22 @@ body {
 }
 
 .footer-container{
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-areas:
+  "logo links contacts";
+  grid-template-columns: 239px auto 175px;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  justify-items:center;
+
   width: 1160px;
-  height: 321px;
+  min-height: 321px;
   margin: 0 auto;
 }
 
 .footer-logo-container{
+  grid-area: logo;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -900,6 +921,8 @@ body {
 }
 
 .footer-links-container{
+  grid-area: links;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -952,6 +975,8 @@ body {
 }
 
 .footer-contacts-container{
+  grid-area: contacts;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -966,6 +991,21 @@ body {
   line-height: 20px;
   color:inherit;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .catalog-header{
   position:relative;
