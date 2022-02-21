@@ -998,20 +998,24 @@ body {
 
 .footer-container{
   display: grid;
-  grid-template-areas:
-  "logo links contacts";
-  grid-template-columns: 239px auto 175px;
-  grid-template-rows: auto;
-  grid-gap: 10px;
-  justify-items:center;
-
+  align-items: start;
   width: 1160px;
   min-height: 321px;
   margin: 0 auto;
+
+  column-gap: 10px;
+  grid-template-areas:
+  "footer-logo footer-logo footer-logo"
+  "footer-adress footer-navigation footer-phone"
+  "footer-rectangle footer-social footer-academy";
+
+  grid-template-columns: 239px 648px 253px;
+  grid-template-rows: 98px min-content auto;
+  justify-items:center;
 }
 
-.footer-logo-container{
-  grid-area: logo;
+/* .footer-logo-container{
+  grid-area: footer-logo;
 
   display: flex;
   flex-direction: column;
@@ -1019,37 +1023,67 @@ body {
   width: 239px;
   min-height: 182px;
   margin-top: 62px;
+} */
+
+.footer-logo-link{
+  grid-area: footer-logo;
+  justify-self: start;
+
+  margin-top: 62px;
+}
+
+.footer-rectangle{
+  grid-area: footer-rectangle;
+
+  margin-top: 66px;
+  justify-self: start;
 }
 
 .footer-adress{
+  min-height:0;
+  margin: 0;
+  margin-top: 35px;
+
   font-family: Rubik;
   font-size: 16px;
   line-height: 19px;
-}
-
-.footer-links-container{
-  grid-area: links;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 444px;
-  min-height: 123px;
-  margin: 137px 0 0 0;
+  grid-area: footer-adress;
 }
 
 .footer-navigation-menu{
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 444px;
+  margin-top: 39px;
+  grid-area: footer-navigation;
 }
 
+.footer-navigation-item{
+  margin-right: 17.5px;
+  margin-left: 17.5px;
+}
+
+
+.footer-social{
+  margin-top:49px;
+}
+
+
 .footer-social-list{
+  grid-area: footer-social;
+
   display: flex;
-  justify-content: space-between;
-  width: 150px;
+  justify-content: center;
+  min-width: 150px;
   min-height: 40px;
   margin: 0 auto;
   padding: 0;
+}
+
+.footer-social-item{
+  margin-right: 7.5px;
+  margin-left: 7.5px;
 }
 
 .footer-social-item .button{
@@ -1073,30 +1107,28 @@ body {
   background:no-repeat center url(../images/icons/icon-twitter.svg);
 }
 
-.academy-button{
+.academy-button{;
   display:block;
   width:115px;
   height:33px;
+  margin-top: 52px;
 
   background:no-repeat center url(../images/logo-html-academy.svg);
+  grid-area: footer-academy;
+  justify-self: end;
 }
 
-.footer-contacts-container{
-  grid-area: contacts;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 175px;
-  min-height: 116px;
-  margin-top: 140px;
-}
 
 .footer-phone{
+  margin-top: 42px;
+  grid-area: footer-phone;
+  justify-self: end;
+
   font-size: 16px;
   line-height: 20px;
   color:inherit;
+  text-decoration: none;
+  text-decoration-line: underline;
 }
 
 
