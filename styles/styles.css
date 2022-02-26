@@ -600,6 +600,9 @@ body {
  padding:0;
 }
 
+.categories-link:active{
+  opacity: 0.3;
+}
 
 .categories-link{
   display: inline-block;
@@ -963,10 +966,9 @@ body {
 }
 
 .contacts-schedule{
-
 margin: 0;
-padding: 0;
 margin-bottom: 30px;
+padding: 0;
 }
 
 
@@ -1183,13 +1185,13 @@ margin-bottom: 30px;
   background:no-repeat center url(../images/icons/icon-twitter.svg);
 }
 
-.academy-button{;
+.academy-button{
   display:block;
   width:115px;
   height:33px;
   margin-top: 52px;
 
-  background:no-repeat center url(../images/logo-html-academy.svg);
+  fill: #FFC700;
   grid-area: footer-academy;
   justify-self: end;
 }
