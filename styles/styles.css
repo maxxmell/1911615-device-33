@@ -389,7 +389,7 @@ body {
   width: 1160px;
   min-height: 560px;
   margin: 0 auto;
-  margin-bottom: 70px;
+  margin-bottom: 57px;
 }
 
 .slider-wrapper{
@@ -459,7 +459,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width:210px;
+  width:220px;
   min-height:40px;
   margin-bottom: 49px;
 
@@ -537,8 +537,6 @@ body {
   background-color: #ffffff;
   border: 2px solid #000000;
   border-radius: 50%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -549,13 +547,17 @@ body {
 .slider-goods-features{
   display: flex;
   min-height: 72px;
+  margin: 0;
 }
 
 .feature-block{
   display: flex;
   flex-direction: column-reverse;
+  justify-content: space-between;
   min-width: 140px;
+  margin: 0;
   margin-right: 20px;
+  padding: 0;
 }
 
 .feature-block:last-child{
@@ -597,9 +599,6 @@ body {
  padding:0;
 }
 
-.categories-list li{
-  margin: 0 auto;
-}
 
 .categories-link{
   display: inline-block;
@@ -629,6 +628,8 @@ body {
   background-color: #ffe17f;
 }
 
+
+/* Блок преимуществ */
 .advantages{
   width:100%;
   min-height:391px;
@@ -650,7 +651,7 @@ body {
   align-items: flex-end;
   box-sizing: border-box;
   width: 287px;
-  min-height: 391px;
+  min-height: 319px;
   margin: 0;
   padding-top: 64px;
   padding-left: 0;
@@ -658,18 +659,23 @@ body {
   border-right: 7px solid #000000;
 }
 
-.advantages-item{
-  width:160px;
-  min-height:20px;
-  margin-bottom: 35px;
-  padding: 9px 120px 11px 0;
+.advantages-item-current{
+  color:#ffe17f;
+
+  background: #000000;
 }
 
-.advantages-item:nth-child(3){
-  margin-bottom: 0;
+.advantages-item + .advantages-item{
+  margin-top: 35px;
 }
+
 
 .advantages-link{
+  display: flex;
+  align-items: center;
+  width:160px;
+  min-height:40px;
+  padding-right: 120px;
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   font-weight: 800;
@@ -680,18 +686,30 @@ body {
   letter-spacing: 0.2em;
 }
 
-.advantages-item-current{
-  color:#ffe17f;
-
-  background-color: #000000;
+.advantages-link-definition{
+  display: block;
+  width: 160px;
+  background: linear-gradient(to bottom, #ffffff00 0px, #ffffff00 6px, #ffe17f 6px, #ffe17f 15px, #ffffff00 15px, #ffffff00 21px) 160px;
 }
 
-.advantage-wrapper{
+.advantages-item-current .advantages-link-definition{
+  background: #000000;
+}
+
+.advantage-features{
   display: flex;
   width: 750px;
   min-height: 200px;
   margin-top: 72.5px;
   margin-left: 112px;
+}
+
+.advantage-features-item{
+  display: none;
+}
+
+.advantage-features-current{
+  display: block;
 }
 
 .advantage-feature-title{
@@ -705,6 +723,8 @@ body {
   line-height: 30px;
   color: #444444;
 }
+
+/* Блок доставки редких вещей */
 
 .rare-goods-delivery{
   width:1160px;
