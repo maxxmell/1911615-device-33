@@ -632,8 +632,8 @@ body {
   background-color: #ffe17f;
 }
 
-
 /* Блок преимуществ */
+
 .advantages{
   width:100%;
   min-height:391px;
@@ -971,7 +971,6 @@ margin-bottom: 30px;
 padding: 0;
 }
 
-
 .newsletter-container{
   width: 100%;
 
@@ -1196,7 +1195,6 @@ padding: 0;
   justify-self: end;
 }
 
-
 .footer-phone{
   margin-top: 42px;
   grid-area: footer-phone;
@@ -1209,7 +1207,6 @@ padding: 0;
   text-decoration-line: underline;
 }
 
-
 /* Конец футера */
 
 .catalog-header{
@@ -1217,7 +1214,7 @@ padding: 0;
 
   width: 1160px;
   min-height: 155px;
-  margin-top: 38px;
+  margin-top: 22.61px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1253,20 +1250,31 @@ padding: 0;
 }
 
 .breadcrumbs-item{
-margin-right: 16px;
+line-height: 19px;
 }
 
-.breadcrumbs-item:last-child{
-  margin-right: 0;
+.breadcrumbs-item + .breadcrumbs-item{
+  margin-left: 16px;
 }
 
-/* .breadcrumbs-arrow{
-  opacity: 0.2;
-} */
+.breadcrumbs-item + .breadcrumbs-item::before{
+  content: "";
+
+  display: inline-block;
+  width: 4px;
+  height: 7px;
+  margin-right: 12px;
+  margin-bottom: 2px;
+
+  background:no-repeat center url(../images/icons/icon-arrow-right.svg);
+  opacity: 0.3;
+}
 
 .breadcrumbs-link{
   font-size: 16px;
+  font-weight: 400;
   line-height: 19px;
+  text-align: center;
 }
 
 .catalog-container{
