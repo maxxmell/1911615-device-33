@@ -119,18 +119,28 @@
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость</legend>
-              <div class="container">
-                  <div class="slider-track"></div>
-                  <input type="range" min="0" max="100" value="0" id="slider-1" oninput="slideOne()">
-                  <input type="range" min="0" max="100" value="60" id="slider-2" oninput="slideTwo()">
-              </div>
-              <div class="values">
-                  <span id="range1">
-                    от 0
-                  </span>
-                  <span id="range2">
-                      до 5000
-                  </span>
+              <div class="range">
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0 px; width: 119px">
+                    <button class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <span></span>
+                    <button class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                    <span></span>
+                  </div>
+                </div>
+
+                <div class="range-wrapper-inputs">
+                  <label class="catalog-filter-label">
+                    от <input class="range-input" type="number" value="0" name="min-price">
+                  </label>
+                  <label class="catalog-filter-label">
+                    до <input class="range-input" type="number" value="5000" name="max-price">
+                  </label>
+                </div>
               </div>
             </fieldset>
             <fieldset class="catalog-filter-group">
@@ -138,32 +148,37 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="color-filter" checked>
-                    Черный
+                    <input class="control-input visually-hidden" type="checkbox" name="color-filter" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Черный</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="color-filter" checked>
-                    Белый
+                    <input class="control-input visually-hidden" type="checkbox" name="color-filter" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Белый</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="color-filter">
-                    Синий
+                    <input class="control-input visually-hidden" type="checkbox" name="color-filter">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Синий</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="color-filter">
-                    Красный
+                    <input class="control-input visually-hidden" type="checkbox" name="color-filter">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Красный</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="color-filter">
-                    Розовый
+                    <input class="control-input visually-hidden" type="checkbox" name="color-filter">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Розовый</span>
                   </label>
                 </li>
               </ul>
