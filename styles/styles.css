@@ -94,6 +94,7 @@ body {
 }
 
 .navigation-link,
+.footer-navigation-link,
 .catalog-toggle-link,
 .breadcrumbs-link,
 .product-card-link,
@@ -1080,6 +1081,8 @@ padding: 0;
   margin-left: auto;
 }
 
+/* Причесано ниже */
+
 /* Начало футера */
 .page-footer{
   color: #ffffff;
@@ -1112,6 +1115,20 @@ padding: 0;
   margin-top: 62px;
 }
 
+/* :hover, :active, :focus*/
+
+.footer-logo-link:hover{
+  opacity: 0.6;
+}
+
+.footer-logo-link:active{
+  opacity: 0.3;
+}
+
+.footer-logo-link:focus{
+  outline:2px solid #AF4FFF;
+}
+
 .footer-rectangle{
   grid-area: footer-rectangle;
 
@@ -1140,9 +1157,60 @@ padding: 0;
 }
 
 .footer-navigation-item{
+  position: relative;
   margin-right: 17.5px;
   margin-left: 17.5px;
 }
+
+/* :hover, :active, :focus*/
+
+.footer-navigation-item:hover{
+  color: #FFC700;
+}
+
+.footer-navigation-item:hover .footer-navigation-link::after{
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  z-index: 1;
+
+  width: 125px;
+  height: 2px;
+
+  background-color: #FFC700;
+}
+
+.footer-navigation-item:active{
+  color: #FFC700;
+  opacity: 0.3;
+}
+
+.footer-navigation-item:active .footer-navigation-link::after{
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  z-index: 1;
+
+  width: 125px;
+  height: 2px;
+
+  background-color: #FFC700;
+}
+
+.footer-navigation-item:focus-within{
+  outline:2px solid #AF4FFF;
+}
+
+.footer-navigation-item:focus-visible{
+  outline:none;
+}
+
+.footer-navigation-link:focus-visible{
+  outline: none;
+}
+
 
 .footer-social{
   margin-top:49px;
@@ -1162,29 +1230,43 @@ padding: 0;
 .footer-social-item{
   margin-right: 7.5px;
   margin-left: 7.5px;
+}
+
+.social-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  min-height:40px;
+  fill:#444444;
 
   background-color:rgba(255, 255, 255, 0.3);
   border-radius: 50%;
 }
 
-.footer-social-item .button{
-  display:block;
-  width: 40px;
-  min-height:40px;
-
-  opacity: 0.3;
+.social-button:hover{
+  background-color: #FFC700;
 }
 
-.button-facebook{
-  background:no-repeat center url(../images/icons/icon-facebook.svg);
+.social-button:active{
+  background-color: #FFC700;
+  fill:rgb(68, 68, 68, 0.3);
 }
 
-.button-instagram{
-  background:no-repeat center url(../images/icons/icon-instagram.svg);
+.footer-social-item:focus{
+  outline:2px solid #AF4FFF;
 }
 
-.button-twitter{
-  background:no-repeat center url(../images/icons/icon-twitter.svg);
+.footer-social-item:focus-within{
+  outline:2px solid #AF4FFF;
+}
+
+.footer-social-item:focus-visible{
+  outline:2px solid #AF4FFF;
+}
+
+.social-button:focus-visible{
+  outline:none;
 }
 
 .academy-button{
@@ -1196,6 +1278,21 @@ padding: 0;
   fill: #FFC700;
   grid-area: footer-academy;
   justify-self: end;
+}
+
+/* :hover, :active, :focus*/
+
+.academy-button:hover{
+  fill: #ffffff;
+}
+
+.academy-button:active{
+  fill: #ffffff;
+  opacity: 0.3;
+}
+
+.academy-button:focus{
+  outline:2px solid #AF4FFF;
 }
 
 .footer-phone{
@@ -1210,7 +1307,24 @@ padding: 0;
   text-decoration-line: underline;
 }
 
+/* :hover, :active, :focus*/
+
+.footer-phone:hover{
+  color: #FFC700;
+}
+
+.footer-phone:active{
+  color: #FFC700;
+  opacity: 0.3;
+}
+
+.footer-phone:focus{
+  outline:2px solid #AF4FFF;
+}
+
 /* Конец футера */
+
+/* Хэдер каталога */
 
 .catalog-header{
   position:relative;
@@ -1244,6 +1358,8 @@ padding: 0;
   line-height: 50px;
   font-weight: 800;
 }
+
+/* Хлебные крошки */
 
 .breadcrumbs{
  display: flex;
@@ -1279,6 +1395,25 @@ line-height: 19px;
   font-weight: 400;
   text-align: center;
 }
+
+/* :hover, :active, :focus*/
+.breadcrumbs-link:hover{
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active{
+  opacity: 0.3;
+}
+
+.breadcrumbs-link:focus{
+  outline:2px solid #AF4FFF;
+}
+
+.breadcrumbs-link:focus-visible{
+  outline:2px solid #AF4FFF;
+}
+
+/* Каталог */
 
 .catalog-container{
   background-color:#F0F0F0;
@@ -1371,14 +1506,18 @@ line-height: 19px;
 /* :hover, :active, :focus*/
 
 .range-toggle:hover {
-  border: 2px solid rgb(36, 36, 36, 0.6);
+  border: 2px solid rgb(36, 36, 36, 0.5);
 }
 
 .range-toggle:active{
-  border: 2px solid rgb(36, 36, 36, 0.3);
+  background: #000000;
 }
 
 .range-toggle:focus {
+  outline:2px solid #AF4FFF;
+}
+
+.range-toggle:focus-visible {
   outline:2px solid #AF4FFF;
 }
 
@@ -1394,12 +1533,15 @@ line-height: 19px;
 
 .range-wrapper-inputs {
   display: flex;
+  justify-content: space-between;
   width: 215px;
   margin-left: -15px;
 
   font-size: 15px;
   line-height: 18px;
+}
 
+.range-limit-type{
   opacity: 0.3;
 }
 
@@ -1410,7 +1552,8 @@ line-height: 19px;
 
 .range-input{
   display: inline-block;
-  width: 85px;
+  box-sizing: border-box;
+  max-width: 80px;
   margin: 0;
   padding: 0;
 
@@ -1422,6 +1565,15 @@ line-height: 19px;
   background-color: transparent;
   border: none;
   appearance: textfield;
+  opacity: 0.3;
+}
+
+.catalog-filter-label:focus-within{
+  outline:2px solid #AF4FFF;
+}
+
+.range-input:focus{
+  outline: none;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -1622,10 +1774,33 @@ line-height: 19px;
   opacity: 0.3;
 }
 
+
+/* :hover, :active, :focus*/
+
+.button-sort:hover img{
+  opacity: 0.6;
+}
+
+.button-sort:active img{
+  opacity: 1;
+}
+
+.button-sort:focus{
+  outline:2px solid #AF4FFF;
+}
+
+.button-sort:focus-visible{
+  outline:2px solid #AF4FFF;
+}
+
+
 .select-control{
   display: block;
   min-width: 159px;
+  margin-top: auto;
+  margin-bottom: auto;
   margin-right: 12px;
+  min-height: 34px;
   padding: 0;
 
   font-family: inherit;
@@ -1635,6 +1810,28 @@ line-height: 19px;
 
   background-color: transparent;
   border: none;
+}
+
+/* :hover, :active, :focus*/
+
+.select-control:hover{
+  opacity: 0.6;
+}
+
+.select-control:active{
+  opacity: 0.3;
+}
+
+.select-control:disabled{
+  opacity: 0.1;
+}
+
+.select-control:focus{
+  outline:2px solid #AF4FFF;
+}
+
+.select-control:focus-visible{
+  outline:2px solid #AF4FFF;
 }
 
 /* Product-list */
@@ -1711,6 +1908,27 @@ margin-right: 40px;
 
 }
 
+.learn-more-button:hover .learn-more{
+  background: #FFE17F;
+}
+
+.learn-more-button:active .learn-more{
+  background: #FFCC33;
+}
+
+.learn-more-button:focus{
+  outline:2px solid #AF4FFF;
+}
+
+.learn-more-button:focus-visible{
+  outline:2px solid #AF4FFF;
+}
+
+.button-disabled{
+  opacity: 0.3;
+}
+
+
 .learn-more{
   display: flex;
   justify-content: center;
@@ -1766,6 +1984,8 @@ margin-right: 40px;
 .product-card-link:active .learn-more-button{
   display: flex;
 }
+
+
 
 .product-card-link:active .learn-more{
   background: linear-gradient(to bottom, transparent 0px, transparent 16px, #FFC700 16px, #FFC700 24px, transparent 24px, transparent 40px);
