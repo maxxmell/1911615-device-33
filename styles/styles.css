@@ -793,14 +793,131 @@ body {
   margin: 0 42.5px;
   padding: 14px 19.5px 14px 18.5px;
 
-  background-color:#DCDCDC80;
+  background-color:rgba(220, 220, 220, 0.5);;
   border-radius: 50%;
-  opacity: 0.5;
 }
 
 .rare-goods-info-icon{
   display: block;
+
+  opacity: 0.5;
 }
+
+/* :hover, :active, :focus*/
+
+.rare-goods-link:hover .rare-goods-info-icon{
+  opacity: 1;
+}
+
+.rare-goods-link:hover .rare-goods-icon{
+  background: #FFC700;
+}
+
+.rare-goods-link:active .rare-goods-info-icon{
+  opacity: 1;
+}
+
+.rare-goods-link:active .rare-goods-icon{
+  background: #FFC700;
+}
+
+.rare-goods-link:active{
+  opacity: 0.3;
+}
+
+.rare-goods-link:focus{
+  outline:2px solid #AF4FFF;
+}
+
+/* Модальное окно */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(240, 240, 240, 0.9);
+}
+
+.rare-goods-modal {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 920px;
+  min-height: 568px;
+  margin: auto;
+  padding: 72px 80px;
+
+  background-color: #ffffff;
+  border: 10px solid #000000;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.order-field{
+  display: block;
+  box-sizing: border-box;
+  padding: 20px 55px 20px 20px;
+  margin: 0;
+  background: #F0F0F0;
+  border: none;
+  min-height: 60px;
+}
+
+
+
+.order-quanity-number {
+	display: flex;
+	width: 180px;
+
+  background: #F0F0F0;
+}
+
+.quanity-number{
+	display: flex;
+  align-items: center;
+	box-sizing: border-box;
+	width: 60px;
+	height: 60px;
+	margin: 0;
+	padding: 0;
+
+  font-family: Rubik;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+	text-align: center;
+
+  background: inherit;
+  border: none;
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+
+.quanity-number::-webkit-outer-spin-button,
+.quanity-number::-webkit-inner-spin-button {
+	display: none;
+}
+
+.quanity-control{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* О нас + Контакты */
 
 .about-contacts-container{
   display: flex;
@@ -910,13 +1027,11 @@ body {
   margin-top: 19px;
 }
 
-.about-us-link{
+.about-contacts-button{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
   min-height: 40px;
-  margin-top: 30px;
 
   font-family: "Raleway", sans-serif;
   line-height: 21px;
@@ -929,22 +1044,33 @@ body {
   background: linear-gradient(to bottom, #ffffff 0px, #ffffff 16px, #ffe17f 16px, #ffe17f 24px, #ffffff 24px, #ffffff 40px);
 }
 
+.about-contacts-button:hover{
+  background: #FFE17F;
+}
+
+.about-contacts-button:active{
+  background: #FFCC33;
+}
+
+.about-contacts-button:focus{
+  outline:2px solid #AF4FFF;
+}
+
+.about-contacts-button:focus-visible{
+  outline:2px solid #AF4FFF;
+}
+
+.about-contacts-button.button-disabled{
+  opacity: 0.3;
+}
+
+.about-us-link{
+  width: 270px;
+  margin-top: 30px;
+}
+
 .contacts-link{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 259px;
-  min-height: 40px;
-
-  font-family: "Raleway", sans-serif;
-  line-height: 21px;
-  font-weight: 800;
-  color: #000000;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.2em;
-
-  background: linear-gradient(to bottom, #ffffff 0px, #ffffff 16px, #ffe17f 16px, #ffe17f 24px, #ffffff 24px, #ffffff 40px);
 }
 
 .contacts p{
@@ -967,11 +1093,30 @@ body {
   color: inherit;
 }
 
+/* :hover, :active, :focus*/
+
+.contacts-phone:hover{
+  opacity: 0.6;
+}
+
+.contacts-phone:active{
+  opacity: 0.3;
+}
+
+.contacts-phone:focus{
+  outline:2px solid #AF4FFF;
+}
+
+
 .contacts-schedule{
 margin: 0;
 margin-bottom: 30px;
 padding: 0;
 }
+
+/* Причесано ниже */
+
+/* Newsletter */
 
 .newsletter-container{
   width: 100%;
@@ -985,13 +1130,6 @@ padding: 0;
   width: 1160px;
   min-height: 421px;
   margin: 0 auto;
-}
-
-.newsletter-form{
-  display: flex;
-  align-items: center;
-  width: 1158px;
-  min-height: 57px;
 }
 
 .newsletter-title{
@@ -1017,19 +1155,27 @@ padding: 0;
   word-break: break-word;
 }
 
+.newsletter-form{
+  display: flex;
+  align-items: center;
+  width: 1158px;
+  min-height: 57px;
+}
+
 .newsletter-field{
   box-sizing: border-box;
   width: 557px;
   min-height: 57px;
   margin-right: 0;
   padding: 0;
+  padding-left: 16px;
 
   font-family: Rubik;
   font-style: normal;
   font-size: 16px;
   line-height: 30px;
   font-weight: 400;
-  color:#000000;
+  color: #444444;
 
   background-color: inherit;
   border: none;
@@ -1037,22 +1183,29 @@ padding: 0;
   outline: none;
 }
 
-.newsletter-field::placeholder {
-  padding-left: 16px;
+/* :hover, :active, :focus*/
 
+.newsletter-field:focus{
+  background: #DCDCDC;
+}
+
+.newsletter-field:focus:invalid{
+  border-color: #FF3D3D;
+}
+
+.newsletter-field:disabled{
+  opacity: 0.3;
+}
+
+.newsletter-field::placeholder {
   font-family: Rubik;
   font-style: normal;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  color:#000000;
+  color: #444444;
 
   opacity: 0.5;
-}
-
-.subscription-free{
-  display: inline-block;
-  margin-left: 16px;
 }
 
 .subscribe-button{
@@ -1074,6 +1227,29 @@ padding: 0;
   letter-spacing: 0.2em;
 
   border: 3px solid #CECECE;
+  cursor: pointer;
+}
+
+/* :hover, :active, :focus*/
+
+.subscribe-button:hover{
+  color: #ffffff;
+
+  background: #000000;
+}
+
+.subscribe-button:active{
+  color: rgb(255, 255, 255, 0.3);
+
+  background: #000000;
+}
+
+.subscribe-button:focus{
+  outline:2px solid #AF4FFF;
+}
+
+.subscribe-button:disabled{
+  opacity: 0.3;
 }
 
 .subscription-icon{
@@ -1081,9 +1257,13 @@ padding: 0;
   margin-left: auto;
 }
 
-/* Причесано ниже */
+.subscription-free{
+  display: inline-block;
+  margin-left: 16px;
+}
 
 /* Начало футера */
+
 .page-footer{
   color: #ffffff;
 
@@ -1158,6 +1338,7 @@ padding: 0;
 
 .footer-navigation-item{
   position: relative;
+
   margin-right: 17.5px;
   margin-left: 17.5px;
 }
@@ -1183,6 +1364,7 @@ padding: 0;
 
 .footer-navigation-item:active{
   color: #FFC700;
+
   opacity: 0.3;
 }
 
@@ -1234,14 +1416,14 @@ padding: 0;
 
 .social-button{
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 40px;
   min-height:40px;
-  fill:#444444;
 
   background-color:rgba(255, 255, 255, 0.3);
   border-radius: 50%;
+  fill:#444444;
 }
 
 .social-button:hover{
@@ -1288,6 +1470,7 @@ padding: 0;
 
 .academy-button:active{
   fill: #ffffff;
+
   opacity: 0.3;
 }
 
@@ -1315,6 +1498,7 @@ padding: 0;
 
 .footer-phone:active{
   color: #FFC700;
+
   opacity: 0.3;
 }
 
@@ -1565,6 +1749,7 @@ line-height: 19px;
   background-color: transparent;
   border: none;
   appearance: textfield;
+
   opacity: 0.3;
 }
 
@@ -1712,6 +1897,7 @@ line-height: 19px;
 
   background: linear-gradient(to bottom, transparent 0px, transparent 16px, #ffe17f 16px, #ffe17f 24px, transparent 24px, transparent 40px);
   border: none;
+  cursor: pointer;
 }
 
 /* :hover, :active, :focus*/
@@ -1797,10 +1983,10 @@ line-height: 19px;
 .select-control{
   display: block;
   min-width: 159px;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 12px;
   min-height: 34px;
+  margin-top: auto;
+  margin-right: 12px;
+  margin-bottom: auto;
   padding: 0;
 
   font-family: inherit;
@@ -1924,7 +2110,7 @@ margin-right: 40px;
   outline:2px solid #AF4FFF;
 }
 
-.button-disabled{
+.learn-more-button.button-disabled{
   opacity: 0.3;
 }
 
@@ -1984,8 +2170,6 @@ margin-right: 40px;
 .product-card-link:active .learn-more-button{
   display: flex;
 }
-
-
 
 .product-card-link:active .learn-more{
   background: linear-gradient(to bottom, transparent 0px, transparent 16px, #FFC700 16px, #FFC700 24px, transparent 24px, transparent 40px);
@@ -2056,6 +2240,7 @@ margin-right: 40px;
 
   background-color: #ffffff;
   border: 3px solid #E5E5E5;
+  cursor: pointer;
 }
 
 /* :hover, :active, :focus*/
