@@ -341,5 +341,51 @@
         </a>
       </div>
     </footer>
+    <!-- Модальное окно -->
+    <div class="modal-container modal-hidden">
+      <div class="rare-goods-modal">
+          <form class="rare-order-form" action="https://echo.htmlacademy.ru/" method="post">
+            <h2 class="goods-modal-title">Доставка под заказ</h2>
+            <button type="button" class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+            </button>
+            <div class="field-group rare-order-form-name">
+              <label class="rare-form-label" for="rare-order-name">Ваше имя:</label>
+              <input class="order-field" type="text" id="rare-order-name" name="rare-order-name" placeholder="Введите имя" required>
+              <span class="rare-order-help help-name">Добавьте имя</span>
+            </div>
+            <div class="field-group rare-order-form-mail">
+              <label class="rare-form-label" for="rare-order-mail">Ваш e-mail:</label>
+              <input class="order-field" type="email" id="rare-order-mail" name="rare-order-mail" placeholder="Введите e-mail" required>
+              <span class="rare-order-help help-mail">Забавный у вас адрес</span>
+            </div>
+            <div class="field-group rare-order-form-order">
+              <label class="rare-form-label" for="rare-order-order">Что нужно привезти:</label>
+              <input class="order-field" type="text" id="rare-order-order" name="rare-order-order" placeholder="В свободной форме">
+            </div>
+            <div class="order-quanity-container">
+              <div class="order-quanity-info">
+                <label class="rare-form-label" for="quanity-number">Количество</label>
+                <span tabindex="0" class="quanity-info-wrapper">
+                  <img class="quanity-info-icon" src="images\icons\icon-info.svg" width="2" height="12" alt="">
+                  <p class="order-tooltip">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+                    к провозу багажа.</p>
+                </span>
+              </div>
+              <div class="order-quanity-number">
+                <button class="quanity-control quanity-minus" type="button" >
+                  <img class="quanity-control-icon" src="images\icons\icon-minus.svg" width="16" height="3" alt="">
+                </button>
+                <input class="quanity-number" type="number" id="quanity-number" name="quanity-number" min="1" value="1" required>
+                <button class="quanity-control" type="button" >
+                  <img class="quanity-control-icon" src="images\icons\icon-plus.svg" width="16" height="17" alt="">
+                </button>
+              </div>
+            </div>
+            <button class="rare-order-button rare-order-submit" type="submit">Отправить</button>
+          </form>
+      </div>
+    </div>
+    <!-- Модальное окно -->
   </body>
 </html>

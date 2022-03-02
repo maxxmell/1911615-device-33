@@ -844,6 +844,10 @@ body {
   background: rgba(240, 240, 240, 0.9);
 }
 
+.modal-hidden{
+  display: none;
+}
+
 .rare-goods-modal {
   position: relative;
 
@@ -858,21 +862,186 @@ body {
   box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
+.rare-order-form{
+  display: grid;
+  align-items: center;
+  margin: 0;
+
+  column-gap: 40px;
+  row-gap: 42px;
+  grid-template-areas:
+  "goods-modal-title goods-modal-title modal-close-button"
+  "rare-order-form-name rare-order-form-mail rare-order-form-mail"
+  "rare-order-form-order rare-order-form-order order-quanity-container"
+  "rare-order-submit rare-order-submit rare-order-submit";
+
+  grid-template-columns: 360px 140px 180px;
+  grid-template-rows: 50px 114px 94px 40px;
+}
+
+.goods-modal-title{
+  margin: 0;
+
+  font-family: Raleway;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 800;
+  grid-area: goods-modal-title;
+}
+
+/* Modal-close button */
+
+.modal-close-button{
+  width: 26px;
+  height: 26px;
+
+  background: no-repeat center url(../images/icons/icon-cross.svg) ;
+  background-color: transparent;
+  background-size: contain;
+  border: none;
+  grid-area: modal-close-button;
+  justify-self: end;
+}
+
+/* :hover, :active, :focus*/
+
+.modal-close-button:hover{
+  opacity: 0.6;
+}
+
+.modal-close-button:active{
+  opacity: 0.3;
+}
+
+.modal-close-button:focus{
+  outline:2px solid #AF4FFF;
+}
+
+.modal-close-button:focus-visible{
+  outline:2px solid #AF4FFF;
+}
+
+/* Form elements */
+
+.rare-order-form-name{
+  grid-area: rare-order-form-name;
+}
+
+.rare-order-form-mail{
+  grid-area: rare-order-form-mail;
+}
+
+.rare-order-form-order{
+  grid-area: rare-order-form-order;
+}
+
+.order-quanity-container{
+  grid-area: order-quanity-container;
+}
+
+.rare-order-submit{
+  grid-area: rare-order-submit;
+
+  margin-right: auto;
+}
+
+.rare-form-label{
+  display: block;
+  margin: 0;
+  margin-bottom: 14px;
+
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.rare-order-help{
+  margin: 0;
+
+  font-family: Rubik;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  display: none;
+}
 
 .order-field{
   display: block;
   box-sizing: border-box;
-  padding: 20px 55px 20px 20px;
+  width: 100%;
+  min-height: 60px;
   margin: 0;
+  padding: 20px 55px 20px 20px;
+
+  font-family: Rubik;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+
   background: #F0F0F0;
   border: none;
-  min-height: 60px;
 }
 
+/* :hover, :active, :focus*/
 
+.order-field:hover{
+  background: #DCDCDC;
+}
+
+.order-field:active{
+  background: #EBEBEB;
+}
+
+.order-field:focus{
+  outline:2px solid #AF4FFF;
+}
+
+.order-field:focus-visible{
+  outline:2px solid #AF4FFF;
+}
+
+.order-field:disabled{
+  opacity: 0.3;
+}
+
+.order-field:focus:invalid {
+  border: 2px solid #FF3D3D;
+}
+
+.help-name.empty{
+  display: block;
+}
+
+.help-name.invalid{
+  display: block;
+  color:  #FF3D3D;
+}
+
+.help-mail.empty{
+  display: block;
+}
+
+.help-mail.invalid{
+  display: block;
+  color:  #FF3D3D;
+}
+
+.order-field::placeholder {
+  font-family: Rubik;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+
+  opacity: 0.3;
+}
 
 .order-quanity-number {
 	display: flex;
+  box-sizing: border-box;
 	width: 180px;
 
   background: #F0F0F0;
@@ -901,6 +1070,90 @@ body {
 	appearance: textfield;
 }
 
+/* :hover, :active, :focus*/
+
+.order-quanity-number.quanity-invalid {
+  border: 2px solid #FF3D3D;
+}
+
+.quanity-number:focus-visible{
+  outline: none;
+}
+
+
+.order-quanity-info{
+   display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.quanity-info-wrapper{
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  margin-bottom: 11px;
+  margin-left: 8px;
+
+  background: #FFE17F;
+  border-radius: 50%;
+}
+
+.order-tooltip{
+  position: absolute;
+  right: -40px;
+  bottom: -170px;
+  z-index: -1;
+
+  box-sizing: border-box;
+  width: 200px;
+  min-height: 160px;
+  margin: 0;
+  margin-top: 10px;
+  padding: 19px 17px 0 19px;
+
+  font-family: Rubik;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ffffff;
+
+  background: #000000;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.order-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 47px;
+
+  width: 14px;
+  height: 6px;
+
+  background: no-repeat center url(../images/icons/icon-triangle.svg) ;
+  background-color: transparent;
+}
+
+.quanity-info-wrapper:hover .order-tooltip{
+  z-index: 1;
+}
+
+.quanity-info-wrapper:focus .order-tooltip{
+  z-index: 1;
+}
+
+.quanity-info-wrapper:focus-visible{
+  outline: none;
+}
+
+.quanity-info-wrapper:focus-within .order-tooltip{
+  z-index: 1;
+}
+
 .quanity-number::-webkit-outer-spin-button,
 .quanity-number::-webkit-inner-spin-button {
 	display: none;
@@ -908,13 +1161,84 @@ body {
 
 .quanity-control{
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   margin: 0;
   padding: 0;
+
   border: none;
+}
+
+/* :hover, :active, :focus*/
+
+.quanity-control:hover{
+  background: #EBEBEB;
+}
+
+.quanity-control:active img{
+  opacity: 0.3;
+}
+
+.quanity-control:focus{
+  outline:2px solid #AF4FFF;
+}
+
+.quanity-control:focus-visible{
+  outline:2px solid #AF4FFF;
+}
+
+.quanity-control:disabled{
+  opacity: 0.3;
+}
+
+/* Rare-order-button */
+
+.rare-order-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  min-height: 40px;
+  padding: 0;
+  padding-left: 3px;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  text-align: center;
+  color: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  background: linear-gradient(to bottom, transparent 0px, transparent 16px, #ffe17f 16px, #ffe17f 24px, transparent 24px, transparent 40px);
+  border: none;
+  cursor: pointer;
+}
+
+/* :hover, :active, :focus*/
+
+.rare-order-button:hover{
+  background: #FFE17F;
+}
+
+.rare-order-button:active{
+  background: #FFCC33;
+}
+
+.rare-order-button:focus{
+  outline:2px solid #AF4FFF;
+}
+
+.rare-order-button:focus-visible{
+  outline:2px solid #AF4FFF;
+}
+
+.rare-order-button:disabled{
+  opacity: 0.3;
 }
 
 /* О нас + Контакты */
