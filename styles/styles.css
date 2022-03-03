@@ -113,9 +113,25 @@ body {
 }
 
 .logo-link{
+  width: 145px;
   margin-top: 4.4px;
   margin-bottom: 30px;
   margin-left: 60px;
+}
+
+/* :hover, :active, :focus*/
+
+.logo-link:hover{
+  opacity: 0.6;
+}
+
+.logo-link:active{
+  opacity: 0.3;
+}
+
+.logo-link:focus{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .header-logo{
@@ -167,6 +183,11 @@ body {
   border: 2px solid #000000;
   border-right: 0px;
   border-radius: 50px 0px 0px 50px;
+}
+
+.search-wrapper:focus-within{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .search-form-label{
@@ -223,6 +244,33 @@ body {
   border: 2px solid #000000;
   border-radius: 0px 20px 20px 0px;
 }
+
+.search-button:hover{
+  color: #ffffff;
+
+  background-color: #000000;
+}
+
+.search-button:active{
+  color: rgb(255, 255, 255, 0.3);
+
+  background-color: #000000;
+}
+
+.search-button:focus{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.search-button:focus-visible{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.search-button:disabled{
+  opacity: 0.3;
+}
+
 
 .navigation-list{
   display: flex;
