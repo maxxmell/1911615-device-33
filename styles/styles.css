@@ -380,7 +380,9 @@ body {
 
 .main-container{
   flex-grow: 1;
-  }
+}
+
+/* Slider */
 
 .slider-wrapper,
 .goods-slider{
@@ -587,6 +589,8 @@ body {
   text-align: left;
 }
 
+/* Catalog categories block */
+
 .catalog-categories{
   margin-bottom: 70px;
 }
@@ -602,10 +606,6 @@ body {
  padding:0;
 }
 
-.categories-link:active{
-  opacity: 0.3;
-}
-
 .categories-link{
   display: inline-block;
 
@@ -615,6 +615,26 @@ body {
   color:#000000;
   text-decoration: none;
   letter-spacing: -0.02em;
+}
+
+/* :hover, :active, :focus*/
+
+.categories-link:hover .categories-link-icon{
+  background: #FFC700;
+}
+
+.categories-link:active{
+  opacity: 0.3;
+}
+
+.categories-link:focus{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.categories-link:focus-visible{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .categories-link p{
@@ -634,7 +654,9 @@ body {
   background-color: #ffe17f;
 }
 
-/* Блок преимуществ */
+/* Здесь причесано */
+
+/* Advantages Block */
 
 .advantages{
   width:100%;
@@ -679,12 +701,12 @@ body {
 .advantages-link{
   display: flex;
   align-items: center;
-  width:160px;
-  min-height:40px;
+  min-width:160px;
+  height:40px;
   padding-right: 120px;
 
   font-family: "Raleway", sans-serif;
-  line-height: 21px;
+  line-height: 20px;
   font-weight: 800;
   text-align: center;
   color:inherit;
@@ -694,14 +716,68 @@ body {
 }
 
 .advantages-link-definition{
-  display: block;
-  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 160px;
+  height: 40px;
 
-  background: linear-gradient(to bottom, #ffffff00 0px, #ffffff00 6px, #ffe17f 6px, #ffe17f 15px, #ffffff00 15px, #ffffff00 21px) 160px;
+  background: linear-gradient(to bottom, transparent 0px, transparent 16px, #ffe17f 16px, #ffe17f 24px, transparent 24px, transparent 40px);
 }
 
 .advantages-item-current .advantages-link-definition{
   background: #000000;
+}
+
+/* :hover, :active, :focus*/
+
+.advantages-link:hover .advantages-link-definition{
+  background: #FFE17F;
+}
+
+.advantages-link:active .advantages-link-definition{
+  background: #FFCC33;
+}
+
+.advantages-link:focus .advantages-link-definition{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.advantages-link:focus-visible .advantages-link-definition{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+/* :hover, :active, :focus*/
+/* Current-link */
+
+.advantages-item-current .advantages-link:hover .advantages-link-definition{
+  background: inherit;
+  color: rgba(255, 225, 127, 0.5);
+}
+
+.advantages-item-current .advantages-link:active .advantages-link-definition{
+  background: inherit;
+  color: rgba(255, 225, 127, 0.3);
+}
+
+.advantages-item-current  .advantages-link:focus {
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.advantages-item-current  .advantages-link:focus .advantages-link-definition{
+  outline: none;
+}
+
+.advantages-item-current .advantages-link:focus-visible {
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.advantages-item-current .advantages-link:focus-visible .advantages-link-definition{
+  outline: none;
 }
 
 .advantage-features{
@@ -749,8 +825,6 @@ body {
   font-weight: 400;
   color: #444444;
 }
-
-/* Здесь причесано */
 
 /* Rare gooods block*/
 
@@ -963,13 +1037,13 @@ body {
 }
 
 .rare-order-help{
+  display: none;
   margin: 0;
 
   font-family: Rubik;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  display: none;
 }
 
 .order-field{
@@ -1024,6 +1098,7 @@ body {
 
 .help-name.invalid{
   display: block;
+
   color:  #FF3D3D;
 }
 
@@ -1033,6 +1108,7 @@ body {
 
 .help-mail.invalid{
   display: block;
+
   color:  #FF3D3D;
 }
 
