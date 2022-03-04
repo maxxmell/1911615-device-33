@@ -285,11 +285,11 @@ img{
   padding: 0;
 }
 
-.navigation-user li{
+.navigation-user-item{
   margin-right: 26px;
 }
 
-.navigation-user li:last-of-type{
+.navigation-user-item:last-of-type{
   margin-right: 0;
 }
 
@@ -349,20 +349,114 @@ img{
 }
 
 .cart-order{
-  min-height: 217px;
   display: flex;
   flex-direction: column;
   justify-content:flex-start ;
   align-content: space-between;
+  min-height: 217px;
 }
 
 .cart-order-list{
-  display: none;
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
+
+.cart-order-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+  padding: 20px;
+}
+
+.cart-order-item + .cart-order-item{
+  margin-top: -1px;
+
+  border-top: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+.cart-item-link{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 143px;
+  max-width: 200px;
+  min-height: 43px;
+}
+
+/* :hover, :active, :focus*/
+
+.cart-item-link:hover{
+  opacity: 0.6;
+}
+
+.cart-item-link:active{
+  opacity: 0.3;
+}
+
+.cart-item-link:focus{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.cart-item-link:focus-visible{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+
+.cart-item-foto{
+  display: block;
+}
+
+.cart-item-description{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  padding-left: 23px;
+
+  font-family: Rubik;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+.cart-order-item-remove{
+  box-sizing: border-box;
+  padding: 0;
+  min-width: 10px;
+  min-height: 10px;
+  border: none;
+  cursor: pointer;
+  background-image: url(../images/icons/icon-cross-small.svg);
+  background-color: transparent;
+}
+
+/* :hover, :active, :focus*/
+
+.cart-order-item-removen:hover{
+  opacity: 0.6;
+}
+
+.cart-order-item-remove:active{
+  opacity: 0.3;
+}
+
+.cart-order-item-remove:focus{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.cart-order-item-remove:focus-visible{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
 .cart-checkout{
   min-height: 44px;
   margin: 0;
@@ -371,6 +465,7 @@ img{
 
   background: #1A1A1A;
 }
+
 .checkout-button{
   display: flex;
   justify-content: center;
@@ -384,11 +479,32 @@ img{
   line-height: 21px;
   font-weight: 800;
   text-align: center;
+  color: #000000;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+
   background: #FFFFFF;
-  color: #000000;
   border: none;
+}
+
+/* :hover, :active, :focus*/
+
+.checkout-button:hover{
+  opacity: 0.6;
+}
+
+.checkout-button:active{
+  opacity: 0.3;
+}
+
+.checkout-button:focus{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.checkout-button:focus-visible{
+  outline:2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 

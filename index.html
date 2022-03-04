@@ -24,7 +24,7 @@
           <button class="search-button" type="submit">Найти</button>
         </form>
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item header-login">
+          <li class="navigation-item navigation-user-item header-login">
             <a class="navigation-link login-link" href="">
               <img class="navigation-link-icon icon-login" src="images/icons/icon-login.svg" width="13" height="12" alt="">
               <span class="new-user login-current">Войти</span>
@@ -32,13 +32,13 @@
               <span class="current-user-logoff login-hidden">Выйти</span>
             </a>
           </li>
-          <li class="navigation-item header-compare">
+          <li class="navigation-item navigation-user-item header-compare">
             <a class="navigation-link" href="">
               <img class="navigation-link-icon icon-compare" src="images/icons/icon-compare.svg" width="10" height="12" alt="">
               <span>Сравнить</span>
             </a>
           </li>
-          <li class="navigation-item header-basket">
+          <li class="navigation-item navigation-user-item header-basket">
             <a class="navigation-link basket-link" href="">
               <div class="basket-status-container">
                 <span class="basket-status">2</span>
@@ -48,10 +48,27 @@
             </a>
             <div class="popover-cart-container">
               <section class="cart-order">
-                <ul class="cart-order-list">
-                  <li class="cart-order-item"></li>
-                  <li class="cart-order-item"></li>
-                  </ul>
+                <ol class="cart-order-list">
+                  <li class="cart-order-item">
+                    <a class="cart-item-link" href="">
+                      <img class="cart-item-foto" src="images/catalog/product-1-small.jpg" width="39" height="43" alt="">
+                      <p class="cart-item-description">Любительская селфи-палка</p>
+                    </a>
+                    <button type="button" class="cart-order-item-remove">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
+                  </li>
+                  <li class="cart-order-item">
+                    <a class="cart-item-link" href="">
+                      <img class="cart-item-foto" src="images/catalog/product-2-small.jpg" width="39" height="43" alt="">
+                      <p class="cart-item-description">Профессиональная
+                        селфи-палка</p>
+                    </a>
+                    <button type="button" class="cart-order-item-remove">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
+                  </li>
+                  </ol>
                   <div class="cart-checkout">
 
                   </div>
