@@ -1190,7 +1190,7 @@ img {
 /* Advantages Block */
 
 .advantages {
-  width: 100%;
+  min-width: 1160px;
   min-height: 391px;
   margin-bottom: 70px;
 
@@ -2085,7 +2085,7 @@ img {
 /* Newsletter */
 
 .newsletter-container {
-  width: 100%;
+  min-width: 1160px;
 
   background-color: #f0f0f0;
 }
@@ -2229,6 +2229,8 @@ img {
 /* Начало футера */
 
 .page-footer {
+  min-width: 1160px;
+
   color: #ffffff;
 
   background-color: #444444;
