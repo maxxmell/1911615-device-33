@@ -46,7 +46,7 @@
               <img class="navigation-link-icon icon-cart" src="images/icons/icon-cart.svg" width="16" height="14" alt="">
               <span>Корзина</span>
             </a>
-            <div class="popover-cart-container">
+            <div class="popover-cart-container cart-popover-close">
               <section class="cart-order">
                 <ol class="cart-order-list">
                   <li class="cart-order-item">
@@ -70,7 +70,17 @@
                   </li>
                   </ol>
                   <div class="cart-checkout">
-
+                    <p class="cart-orders">
+                      <span class="order-counter">Товаров: </span>
+                      <!-- <span class="order-counter-total"></span> -->
+                      <!-- Reserved in case JS changes -->
+                    </p>
+                    <p class="cart-orders-prices">
+                      <span class="order-price">Сумма: </span>
+                      <!-- For JS summ counter -->
+                      <span class="order-price-total">2000 ₽</span>
+                      <!-- JS summ counter end -->
+                    </p>
                   </div>
                   <button class="checkout-button" type="submit">Открыть корзину</button>
               </section>

@@ -310,8 +310,11 @@ img{
   height: 30px;
   margin-left:-8px;
 }
-.popover-open {
-  display: block;
+
+/* Cart popover */
+
+.cart-popover-close{
+  display: none;
 }
 
 .popover-cart-container{
@@ -361,6 +364,7 @@ img{
   padding: 0;
 
   list-style: none;
+  counter-reset: order-items;
 }
 
 .cart-order-item{
@@ -369,6 +373,7 @@ img{
   align-items: flex-start;
   margin: 0;
   padding: 20px;
+  counter-increment: order-items;
 }
 
 .cart-order-item + .cart-order-item{
@@ -381,9 +386,9 @@ img{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  min-width: 143px;
-  max-width: 200px;
   min-height: 43px;
+
+  text-decoration: none;
 }
 
 /* :hover, :active, :focus*/
@@ -406,13 +411,14 @@ img{
   outline-offset: 2px;
 }
 
-
 .cart-item-foto{
   display: block;
 }
 
 .cart-item-description{
   display: inline-block;
+  min-width: 120px;
+  max-width: 170px;
   margin: 0;
   padding: 0;
   padding-left: 23px;
@@ -422,19 +428,19 @@ img{
   line-height: 20px;
   font-weight: 400;
   color: #FFFFFF;
-  text-decoration: none;
   word-wrap: break-word;
 }
 
 .cart-order-item-remove{
   box-sizing: border-box;
-  padding: 0;
   min-width: 10px;
   min-height: 10px;
+  padding: 0;
+
+  background-color: transparent;
+  background-image: url(../images/icons/icon-cross-small.svg);
   border: none;
   cursor: pointer;
-  background-image: url(../images/icons/icon-cross-small.svg);
-  background-color: transparent;
 }
 
 /* :hover, :active, :focus*/
@@ -458,12 +464,24 @@ img{
 }
 
 .cart-checkout{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
   min-height: 44px;
   margin: 0;
   margin-top: auto;
   padding: 0 20px;
 
   background: #1A1A1A;
+}
+
+.cart-orders{
+  max-width: 120px;
+}
+
+.order-counter::after{
+ content: counter(order-items);
 }
 
 .checkout-button{
@@ -490,11 +508,12 @@ img{
 /* :hover, :active, :focus*/
 
 .checkout-button:hover{
-  opacity: 0.6;
+  background: #FFE17F;
 }
 
 .checkout-button:active{
-  opacity: 0.3;
+  background: #FFE17F;
+  color: rgb(0, 0, 0,0.3);
 }
 
 .checkout-button:focus{
@@ -507,7 +526,7 @@ img{
   outline-offset: 2px;
 }
 
-
+/* Navigation-menu */
 
 .navigation-link{
   position: relative;
@@ -785,6 +804,7 @@ img{
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
+  padding-left: 10px;
 }
 
 .main-container{

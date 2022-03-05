@@ -24,7 +24,7 @@
           <button class="search-button" type="submit">Найти</button>
         </form>
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item header-login">
+          <li class="navigation-item navigation-user-item header-login">
             <a class="navigation-link login-link" href="">
               <img class="navigation-link-icon icon-login" src="images/icons/icon-login.svg" width="13" height="12" alt="">
               <span class="new-user login-current">Войти</span>
@@ -32,13 +32,13 @@
               <span class="current-user-logoff login-hidden">Выйти</span>
             </a>
           </li>
-          <li class="navigation-item header-compare">
+          <li class="navigation-item navigation-user-item header-compare">
             <a class="navigation-link" href="">
               <img class="navigation-link-icon icon-compare" src="images/icons/icon-compare.svg" width="10" height="12" alt="">
               <span>Сравнить</span>
             </a>
           </li>
-          <li class="navigation-item header-basket">
+          <li class="navigation-item navigation-user-item header-basket">
             <a class="navigation-link basket-link" href="">
               <div class="basket-status-container">
                 <span class="basket-status">2</span>
@@ -46,6 +46,45 @@
               <img class="navigation-link-icon icon-cart" src="images/icons/icon-cart.svg" width="16" height="14" alt="">
               <span>Корзина</span>
             </a>
+            <div class="popover-cart-container cart-popover-close">
+              <section class="cart-order">
+                <ol class="cart-order-list">
+                  <li class="cart-order-item">
+                    <a class="cart-item-link" href="">
+                      <img class="cart-item-foto" src="images/catalog/product-1-small.jpg" width="39" height="43" alt="">
+                      <p class="cart-item-description">Любительская селфи-палка</p>
+                    </a>
+                    <button type="button" class="cart-order-item-remove">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
+                  </li>
+                  <li class="cart-order-item">
+                    <a class="cart-item-link" href="">
+                      <img class="cart-item-foto" src="images/catalog/product-2-small.jpg" width="39" height="43" alt="">
+                      <p class="cart-item-description">Профессиональная
+                        селфи-палка</p>
+                    </a>
+                    <button type="button" class="cart-order-item-remove">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
+                  </li>
+                  </ol>
+                  <div class="cart-checkout">
+                    <p class="cart-orders">
+                      <span class="order-counter">Товаров: </span>
+                      <!-- <span class="order-counter-total"></span> -->
+                      <!-- Reserved in case JS changes -->
+                    </p>
+                    <p class="cart-orders-prices">
+                      <span class="order-price">Сумма: </span>
+                      <!-- For JS summ counter -->
+                      <span class="order-price-total">2000 ₽</span>
+                      <!-- JS summ counter end -->
+                    </p>
+                  </div>
+                  <button class="checkout-button" type="submit">Открыть корзину</button>
+              </section>
+            </div>
           </li>
         </ul>
       </section>
@@ -55,14 +94,11 @@
           <h2 class="visually-hidden">Категории каталога подменю</h2>
           <a class="catalog-toggle-link" href="catalog.html">
             <span>Каталог товаров</span>
-            <div class="catalog-toggle-wrapper">
-              <img class="catalog-toggle-icon" src="images/icons/icon-plus.svg" width="16" height="16" alt="">
-            </div>
+            <span class="catalog-toggle-button"></span>
           </a>
-          <!-- <ul class="catalog-list catalog-hidden"> -->
-          <ul class="catalog-list catalog-hidden visually-hidden">
+          <ul class="catalog-list">
             <li class="catalog-item-category catalog-item-category-VR">
-              <a class="navigation-link toggle-navigation-link" href="">Виртуальная реальность</a>
+              <a class="navigation-link" href="">Виртуальная реальность</a>
             </li>
             <li class="catalog-item-category catalog-item-category-monopod">
               <a class="navigation-link" href="">Моноподы для селфи</a>
