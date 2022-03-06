@@ -17,26 +17,24 @@
         <h2 class="visually-hidden">Пользовательское меню</h2>
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="search-wrapper">
-            <label class="search-form-label" for="search-request">
-              <img class="search-form-icon" src="images/icons/icon-search.svg" width="16" height="16" alt="">
-            </label>
+            <label class="search-form-label" for="search-request"></label>
             <input type="search" class="search-input" name="search-request" id="search-request" placeholder="Поиск по сайту" >
           </div>
           <button class="search-button" type="submit">Найти</button>
         </form>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item navigation-user-item header-login">
-            <a class="navigation-link login-link" href="">
-              <img class="navigation-link-icon icon-login" src="images/icons/icon-login.svg" width="13" height="12" alt="">
-              <span class="new-user login-current">Войти</span>
-              <span class="current-user login-hidden">Коля Петухов</span>
-              <span class="current-user-logoff login-hidden">Выйти</span>
+            <a class="navigation-link login-link new-user login-show" href="">
+              <span class="navigation-link-description">Войти</span>
             </a>
+            <a class="navigation-link login-link current-user" href="">
+              <span class="navigation-link-description">Коля Петухов</span>
+            </a>
+            <a class="navigation-link current-user current-user-logoff" href="">Выйти</a>
           </li>
           <li class="navigation-item navigation-user-item header-compare">
             <a class="navigation-link" href="">
-              <img class="navigation-link-icon icon-compare" src="images/icons/icon-compare.svg" width="10" height="12" alt="">
-              <span>Сравнить</span>
+              <span class="navigation-link-description compare-description">Сравнить</span>
             </a>
           </li>
           <li class="navigation-item navigation-user-item header-basket">
@@ -44,10 +42,9 @@
               <div class="basket-status-container">
                 <span class="basket-status">2</span>
               </div>
-              <img class="navigation-link-icon icon-cart" src="images/icons/icon-cart.svg" width="16" height="14" alt="">
-              <span>Корзина</span>
+              <span class="navigation-link-description basket-description">Корзина</span>
             </a>
-            <div class="popover-cart-container cart-popover-close">
+            <div class="popover-cart-container">
               <section class="cart-order">
                 <ol class="cart-order-list">
                   <li class="cart-order-item">
