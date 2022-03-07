@@ -728,6 +728,10 @@ img {
   text-align: start;
 }
 
+.header-delivery a{
+  margin-right: -2px;
+}
+
 /* Catalog popup action */
 
 .catalog-toggler {
@@ -772,9 +776,11 @@ img {
 
 .catalog-toggle-menu {
   display: flex;
+  box-sizing: border-box;
   align-items: center;
   max-width: 243px;
   min-height: 50px;
+  padding-top: 1px;
 }
 
 .catalog-toggle-button {
@@ -887,13 +893,13 @@ img {
   min-height: 560px;
   margin: 0 auto;
   margin-top: -15px;
-  margin-bottom: 73px;
+  margin-bottom: 71px;
 }
 
 .goods-slider::before {
   content: "";
   position: absolute;
-  top: -150px;
+  top: -148px;
   left: 0;
   z-index: -2;
 
@@ -947,6 +953,7 @@ img {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: slider-image;
+  margin-top: 1px;
 
   display: block;
 }
@@ -970,7 +977,8 @@ img {
 .goods-slider-header {
   min-height: 100px;
   margin: 0;
-  margin-bottom: 29px;
+  margin-top: 1px;
+  margin-bottom: 28px;
 
   font-family: "Raleway", sans-serif;
   font-size: 50px;
@@ -985,12 +993,17 @@ img {
 }
 
 .goods-slider-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 220px;
+  display: inline-block;
+  align-self: flex-start;
+  box-sizing: border-box;
+  min-width: 220px;
+  max-width: 400px;
   min-height: 40px;
-  margin-bottom: 49px;
+  margin-bottom: 48px;
+  padding-top: 10px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  padding-left: 8px;
 
   font-family: "Raleway", sans-serif;
   line-height: 21px;
@@ -1026,17 +1039,21 @@ img {
 
 .slider-goods-features {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 460px;
   min-height: 72px;
   margin: 0;
 }
 
 .feature-block {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column-reverse;
   justify-content: space-between;
   min-width: 140px;
   margin: 0;
   margin-right: 20px;
+  margin-bottom: 10px;
   padding: 0;
 }
 
@@ -1049,6 +1066,7 @@ img {
 
   font-size: 16px;
   line-height: 30px;
+  padding-top: 5px;
   text-align: left;
   color: #444444;
 }
@@ -1195,12 +1213,12 @@ img {
 }
 
 .categories-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  align-items: start;
   width: 1160px;
   min-height: 253px;
+  grid-template-columns: repeat(6, 160px);
+  column-gap: 40px;
   margin: 0 auto;
   padding: 0;
 }
