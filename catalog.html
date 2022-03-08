@@ -373,7 +373,7 @@
       </div>
     </footer>
     <!-- Модальное окно -->
-    <div class="modal-container modal-hidden">
+    <div class="modal-container">
       <div class="rare-goods-modal">
           <form class="rare-order-form" action="https://echo.htmlacademy.ru/" method="post">
             <h2 class="goods-modal-title">Доставка под заказ</h2>
@@ -381,12 +381,12 @@
             <span class="visually-hidden">Закрыть</span>
             </button>
             <div class="field-group rare-order-form-name">
-              <label class="rare-form-label" for="rare-order-name">Ваше имя:</label>
+              <label class="rare-form-label name-label" for="rare-order-name">Ваше имя:</label>
               <input class="order-field" type="text" id="rare-order-name" name="rare-order-name" placeholder="Введите имя" required>
               <span class="rare-order-help help-name">Добавьте имя</span>
             </div>
             <div class="field-group rare-order-form-mail">
-              <label class="rare-form-label" for="rare-order-mail">Ваш e-mail:</label>
+              <label class="rare-form-label mail-label" for="rare-order-mail">Ваш e-mail:</label>
               <input class="order-field" type="email" id="rare-order-mail" name="rare-order-mail" placeholder="Введите e-mail" required>
               <span class="rare-order-help help-mail">Забавный у вас адрес</span>
             </div>
@@ -396,9 +396,8 @@
             </div>
             <div class="order-quanity-container">
               <div class="order-quanity-info">
-                <label class="rare-form-label" for="quanity-number">Количество</label>
+                <label class="rare-form-label" for="quanity-number">Количество:</label>
                 <p tabindex="0" class="quanity-info-wrapper">
-                  <img class="quanity-info-icon" src="images/icons/icon-info.svg" width="2" height="12" alt="">
                   <span class="order-tooltip">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
                     к провозу багажа.</span>
                 </p>

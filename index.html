@@ -333,7 +333,7 @@
         </section>
         <section class="contacts">
           <h2 class="contacts-title">Контакты</h2>
-          <p class="contacts-pickup-info">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.</p>
+          <p class="contacts-pickup-info">Вы можете забрать товар сами, заехав в наш офис.<br> Заодно сможете проверить работоспособность покупки.</p>
           <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
           <p class="contacts-adress">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
           <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
@@ -352,9 +352,8 @@
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="newsletter-field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
             <button class="subscribe-button" type="submit">Подписаться</button>
-            <img class="subscription-icon" src="images/icons/icon-big-tick.svg" width="14" height="14" alt="">
-            <p class="subscription-free">Это бесплатно</p>
           </form>
+          <p class="subscription-free">Это бесплатно</p>
         </section>
       </div>
     </main>
@@ -409,20 +408,20 @@
       </div>
     </footer>
     <!-- Модальное окно -->
-    <div class="modal-container modal-hidden">
-      <div class="rare-goods-modal modal-hidden">
+    <div class="modal-container">
+      <div class="rare-goods-modal">
           <form class="rare-order-form" action="https://echo.htmlacademy.ru/" method="post">
             <h2 class="goods-modal-title">Доставка под заказ</h2>
             <button type="button" class="modal-close-button">
             <span class="visually-hidden">Закрыть</span>
             </button>
             <div class="field-group rare-order-form-name">
-              <label class="rare-form-label" for="rare-order-name">Ваше имя:</label>
+              <label class="rare-form-label name-label" for="rare-order-name">Ваше имя:</label>
               <input class="order-field" type="text" id="rare-order-name" name="rare-order-name" placeholder="Введите имя" required>
               <span class="rare-order-help help-name">Добавьте имя</span>
             </div>
             <div class="field-group rare-order-form-mail">
-              <label class="rare-form-label" for="rare-order-mail">Ваш e-mail:</label>
+              <label class="rare-form-label mail-label" for="rare-order-mail">Ваш e-mail:</label>
               <input class="order-field" type="email" id="rare-order-mail" name="rare-order-mail" placeholder="Введите e-mail" required>
               <span class="rare-order-help help-mail">Забавный у вас адрес</span>
             </div>
@@ -432,9 +431,8 @@
             </div>
             <div class="order-quanity-container">
               <div class="order-quanity-info">
-                <label class="rare-form-label" for="quanity-number">Количество</label>
+                <label class="rare-form-label" for="quanity-number">Количество:</label>
                 <p tabindex="0" class="quanity-info-wrapper">
-                  <img class="quanity-info-icon" src="images/icons/icon-info.svg" width="2" height="12" alt="">
                   <span class="order-tooltip">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
                     к провозу багажа.</span>
                 </p>
