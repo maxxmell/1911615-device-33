@@ -287,7 +287,7 @@ img {
   padding: 0;
 }
 
-.navigation-user{
+.navigation-user {
   display: grid;
   align-items: start;
   min-height: 30px;
@@ -297,7 +297,7 @@ img {
   grid-template-columns: repeat(3, minmax(min-content, 250px));
 }
 
-.navigation-user-item{
+.navigation-user-item {
   min-width: 105;
   max-width: 240px;
   min-height: 30px;
@@ -601,19 +601,19 @@ img {
   min-width: 231px;
 }
 
-.new-user{
+.new-user {
   display: none;
 }
 
-.current-user{
+.current-user {
   display: none;
 }
 
-.login-show{
+.login-show {
   display: inline-block;
 }
 
-.login-link::before{
+.login-link::before {
   content: "";
 
   display: inline-block;
@@ -635,11 +635,11 @@ img {
   min-width: 113px;
 }
 
-.compare-description{
+.compare-description {
   display: inline-block;
 }
 
-.compare-description::before{
+.compare-description::before {
   content: "";
 
   display: inline-block;
@@ -666,11 +666,11 @@ img {
   padding-left: 15px;
 }
 
-.basket-description{
+.basket-description {
   display: inline-block;
 }
 
-.basket-description::before{
+.basket-description::before {
   content: "";
 
   display: inline-block;
@@ -728,7 +728,7 @@ img {
   text-align: start;
 }
 
-.header-delivery a{
+.header-delivery a {
   margin-right: -2px;
 }
 
@@ -750,6 +750,7 @@ img {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
+
 .catalog-toggle-link:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
@@ -1878,7 +1879,7 @@ img {
   border-radius: 50%;
 }
 
-.quanity-info-wrapper::before{
+.quanity-info-wrapper::before {
   content: "";
 
   display: inline-block;
@@ -2118,7 +2119,7 @@ img {
   list-style: none;
 }
 
-.transport-companies-list b{
+.transport-companies-list b {
   margin: 0;
   margin-left: -2px;
   padding: 0;
@@ -2399,7 +2400,6 @@ img {
   max-width: 200px;
   margin: 0;
   margin-top: 157px;
-  margin-right: -1px;
   margin-right: 1px;
 }
 
@@ -3585,7 +3585,7 @@ img {
 
 .catalog-pagination-disabled,
 .catalog-pagination-current,
-.catalog-pagination-item-disabled{
+.catalog-pagination-item-disabled {
   cursor: default;
 }
 
