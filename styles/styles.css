@@ -995,9 +995,9 @@ img {
   min-height: 40px;
   margin-bottom: 48px;
   padding-top: 10px;
-  padding-right: 5px;
+  padding-right: 15px;
   padding-bottom: 10px;
-  padding-left: 8px;
+  padding-left: 18px;
 
   font-family: "Raleway", sans-serif;
   line-height: 21px;
@@ -1292,6 +1292,7 @@ img {
   min-height: 319px;
   margin: 0;
   padding-top: 64px;
+  margin-bottom: 50px;
   padding-left: 0;
 
   border-right: 7px solid #000000;
@@ -1362,6 +1363,21 @@ img {
 
 /* :hover, :active, :focus*/
 /* Current-link */
+.advantages-link:focus {
+  outline: none;
+}
+
+.advantages-link:focus-visible {
+  outline: none;
+}
+
+.advantages-item:focus {
+  outline: none;
+}
+
+.advantages-item:focus-visible {
+  outline: none;
+}
 
 .advantages-item-current .advantages-link:hover .advantages-link-definition {
   color: rgba(255, 225, 127, 0.5);
@@ -1385,8 +1401,7 @@ img {
 }
 
 .advantages-item-current .advantages-link:focus-visible {
-  outline: 2px solid #af4fff;
-  outline-offset: 2px;
+  outline: none;
 }
 
 .advantages-item-current .advantages-link:focus-visible .advantages-link-definition {
@@ -1418,6 +1433,7 @@ img {
   width: 475px;
   margin: 0;
   margin-right: 83px;
+  padding-bottom: 50px;
 }
 
 .advantage-feature-title {
@@ -1900,11 +1916,11 @@ img {
 }
 
 .quanity-info-wrapper:hover .order-tooltip {
-  z-index: 1;
+  z-index: 2;
 }
 
 .quanity-info-wrapper:focus .order-tooltip {
-  z-index: 1;
+  z-index: 2;
 }
 
 .quanity-info-wrapper:focus-visible {
@@ -1932,6 +1948,9 @@ img {
   border: none;
 }
 
+.quanity-minus {
+  z-index: 1;
+}
 /* :hover, :active, :focus*/
 
 .quanity-control:hover {
@@ -3569,4 +3588,18 @@ img {
 .catalog-pagination-button:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
+}
+
+.current-page-link:focus {
+  outline: none;
+  cursor: default;
+}
+
+.current-page-link:hover {
+  cursor: default;
+}
+
+.current-page-link:focus-visible {
+  outline: none;
+  cursor: default;
 }
