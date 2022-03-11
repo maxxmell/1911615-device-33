@@ -1785,7 +1785,7 @@ img {
   opacity: 0.3;
 }
 
-.order-field:focus:invalid {
+.order-field:not(:placeholder-shown):not(:focus):invalid {
   border: 2px solid #ff3d3d;
 }
 
