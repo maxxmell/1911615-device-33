@@ -1379,32 +1379,32 @@ img {
   outline: none;
 }
 
-.advantages-item-current .advantages-link:hover .advantages-link-definition {
+.advantages-link-current:hover .advantages-link-definition {
   color: rgba(255, 225, 127, 0.5);
 
   background: inherit;
 }
 
-.advantages-item-current .advantages-link:active .advantages-link-definition {
+.aadvantages-link-current:active .advantages-link-definition {
   color: rgba(255, 225, 127, 0.3);
 
   background: inherit;
 }
 
-.advantages-item-current .advantages-link:focus {
+.advantages-link-current:focus {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
 
-.advantages-item-current .advantages-link:focus .advantages-link-definition {
+.advantages-link-current:focus .advantages-link-definition {
   outline: none;
 }
 
-.advantages-item-current .advantages-link:focus-visible {
+.advantages-link-current:focus-visible {
   outline: none;
 }
 
-.advantages-item-current .advantages-link:focus-visible .advantages-link-definition {
+.advantages-link-current:focus-visible .advantages-link-definition {
   outline: none;
 }
 
